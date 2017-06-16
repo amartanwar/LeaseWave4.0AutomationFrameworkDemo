@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="Jars/poi-3.16.jar"/>
 	<classpathentry kind="lib" path="Jars/poi-examples-3.16.jar"/>
 	<classpathentry kind="lib" path="Jars/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
