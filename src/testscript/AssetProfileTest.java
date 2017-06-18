@@ -8,7 +8,7 @@ import pom.AssetMenuPage;
 import pom.LeaseWaveHeader;
 
 
-public class AssetProfileTest extends BaseTest
+public class AssetProfileTest extends BaseTest 
 {
 	@Test
 	public void assetCreation() throws InterruptedException
