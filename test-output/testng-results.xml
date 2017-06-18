@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19993" started-at="2017-06-17T18:06:50Z" finished-at="2017-06-17T18:07:10Z">
+  <suite name="Default suite" duration-ms="17724" started-at="2017-06-18T13:52:39Z" finished-at="2017-06-18T13:52:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19993" started-at="2017-06-17T18:06:50Z" finished-at="2017-06-17T18:07:10Z">
+    <test name="Default test" duration-ms="17724" started-at="2017-06-18T13:52:39Z" finished-at="2017-06-18T13:52:56Z">
       <class name="testscript.AssetProfileTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="openApplication" is-config="true" duration-ms="9082" started-at="2017-06-17T23:36:50Z" finished-at="2017-06-17T23:36:59Z">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="openApplication" is-config="true" duration-ms="6561" started-at="2017-06-18T19:22:39Z" finished-at="2017-06-18T19:22:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="assetCreation()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="assetCreation" duration-ms="10075" started-at="2017-06-17T23:36:59Z" finished-at="2017-06-17T23:37:09Z">
+        <test-method status="PASS" signature="assetCreation()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="assetCreation" duration-ms="10314" started-at="2017-06-18T19:22:45Z" finished-at="2017-06-18T19:22:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- assetCreation -->
-        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="closeApplication" is-config="true" duration-ms="821" started-at="2017-06-17T23:37:09Z" finished-at="2017-06-17T23:37:10Z">
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="closeApplication" is-config="true" duration-ms="828" started-at="2017-06-18T19:22:56Z" finished-at="2017-06-18T19:22:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->

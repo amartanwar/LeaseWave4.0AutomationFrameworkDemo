@@ -17,13 +17,15 @@ public abstract class BaseTest implements AutoConst
 	{
 		System.setProperty(CHROME_KEY,CHROME_VALUE);
 		driver=new ChromeDriver();
-		driver.get("http://otbapsrv:206");
-		String comanyName=excel.getCellValue("./TestData/Input.xlsx", "credentials", 0, 0);
-		String userName=excel.getCellValue("./TestData/Input.xlsx", "credentials", 0, 1);
-		String password=excel.getCellValue("./TestData/Input.xlsx", "credentials", 0, 2);
+		
+		String url=excel.getCellValue("./TestData/Input.xlsx", "credentials", 1, 0);
+		String companyName=excel.getCellValue("./TestData/Input.xlsx", "credentials", 1, 1);
+		String userName=excel.getCellValue("./TestData/Input.xlsx", "credentials", 1, 2);
+		String password=excel.getCellValue("./TestData/Input.xlsx", "credentials", 1, 3);
+		driver.get(url);
 		LoginPage lp=new LoginPage(driver);
-		lp.setCompanyName(comanyName);
-		lp.RideTheLeaseWave();
+		lp.setCompanyName(companyName);
+		lp.rideTheLeaseWave();
 
 		for(String winHandle: driver.getWindowHandles())
 		{

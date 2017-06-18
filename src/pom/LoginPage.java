@@ -40,7 +40,7 @@ public class LoginPage extends BasePage
 		companyName.sendKeys(comName);
 	}
 	
-	public void RideTheLeaseWave()
+	public void rideTheLeaseWave()
 	{
 		rideTheLeaseWave.click();
 	}

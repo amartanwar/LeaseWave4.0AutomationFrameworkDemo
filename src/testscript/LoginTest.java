@@ -12,7 +12,7 @@ public class LoginTest extends BaseTest
 		LoginPage l=new LoginPage(driver);
 		l.verfyTittle("LeaseWave");
 		l.setCompanyName("Merchants-TVQA");
-		l.RideTheLeaseWave();
+		l.rideTheLeaseWave();
 
 		for(String winHandle: driver.getWindowHandles())
 		{
