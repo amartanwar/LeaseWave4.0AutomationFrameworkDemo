@@ -6,7 +6,6 @@ import generic.BaseTest;
 import pom.AssetListPage;
 import pom.AssetMenuPage;
 import pom.LeaseWaveHeader;
-import pom.LoginPage;
 
 
 public class AssetProfileTest extends BaseTest
