@@ -13,7 +13,7 @@ public class AssetProfilePage extends BasePage
 	@FindBy(id="ctl00_F_PH_txtUnitNumber")
 	private WebElement unitNumber;
 	
-	@FindBy(id="ctl00_F_PH_txtUnitNumber")
+	@FindBy(id="ctl00_F_PH_txtAcquisitionDate_input")
 	private WebElement acquiredDate;
 	
 	@FindBy(id="ctl00_F_PH_cboInventoryTypeID_cboComboBoxControl")
@@ -57,6 +57,9 @@ public class AssetProfilePage extends BasePage
 	
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
 	private WebElement assetVehicleDetailsSaveButton;
+	
+	@FindBy(id="ctl00_NB_PH_InventoryNavBarUC_cmdNavClose_cmdButtonControl")
+	private WebElement assetProfileGlobalClose;
 
 	public AssetProfilePage(WebDriver driver) 
 	{
@@ -66,17 +69,18 @@ public class AssetProfilePage extends BasePage
 	
 	public void setUnitNumber(String un)
 	{
+		unitNumber.clear();
 		unitNumber.sendKeys(un);
 	}
 	
-//	public void setAcquiredDate(String date)
-//	{
-//		unitNumber.sendKeys(date);
-//	}
+	public void setAcquiredDate(String date)
+	{
+		unitNumber.sendKeys(SystemDate.currentDate());
+	}
 	
 	public void setAcquiredDate()
 	{
-		unitNumber.sendKeys("6-18-2017");
+		acquiredDate.sendKeys("6-18-2017");
 	}
 	
 	public void setAssetType(String assetType)
@@ -105,19 +109,21 @@ public class AssetProfilePage extends BasePage
 	public void setContractNumber(String conNumber)
 	{
 		Select se= new Select(contractNumber);
-		se.selectByVisibleText(conNumber);
+		se.selectByIndex(6);
 	}
 	
 	public void setDivision(String divNumber)
 	{
 		Select se= new Select(divisionNumber);
-		se.selectByVisibleText(divNumber);
+//		se.selectByValue(divNumber);
+		se.selectByIndex(1);
 	}
 	
 	public void setSubdivision(String subdivNumber)
 	{
 		Select se= new Select(subDivisionNumber);
-		se.selectByVisibleText(subdivNumber);
+//		se.selectByValue(subdivNumber);
+		se.selectByIndex(1);
 	}
 	
 	public void setLocationCode(String locCode)
@@ -127,20 +133,22 @@ public class AssetProfilePage extends BasePage
 	
 	public void setEffectiveDate()
 	{
-		effectiveDate.sendKeys(SystemDate.date);
+		effectiveDate.sendKeys(SystemDate.currentDate());
 	}
 	
 	
 	public void setCompany(String companyName)
 	{
 		Select se= new Select(company);
-		se.selectByVisibleText(companyName);
+//		se.selectByVisibleText(companyName);
+		se.selectByIndex(1);
 	}
 	
 	public void setDepartment(String AssetUsageCondition)
 	{
 		Select se= new Select(department);
-		se.selectByVisibleText(AssetUsageCondition);
+//		se.selectByVisibleText(AssetUsageCondition);
+		se.selectByIndex(1);
 	}
 	
 	public void clickOnSave()
@@ -151,12 +159,20 @@ public class AssetProfilePage extends BasePage
 	public void clickOnClose()
 	{
 		closeButton.click();
+		
 	}
 	
-	public void clickOnVehicleDetailsSaveButton()
+	public void clickOnVehicleDetailsSaveButton() 
 	{
 		assetVehicleDetailsSaveButton.click();
 	}
+	
+	public void clickOnAssetProfileGlobalClose() 
+	{
+		assetProfileGlobalClose.click();
+		
+	}
+	
 	
 	
 	

@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest
 	public void testLogin() throws InterruptedException
 	{
 		LoginPage l=new LoginPage(driver);
-		l.verfyTittle("LeaseWave");
+		l.verfyTittle("LeaseWave","Application login fail");
 		l.setCompanyName("Merchants-TVQA");
 		l.rideTheLeaseWave();
 
@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest
 		Thread.sleep(2000);
 		try
 		{
-			l.verfyTittle("LeaseWave LogOn");
+			l.verfyTittle("LeaseWave LogOn","Application login fail");
 		}
 		catch(Exception e)
 		{
@@ -35,7 +35,7 @@ public class LoginTest extends BaseTest
 			l.setPassword("Samsung-1234");
 			l.clickOnLogin();
 			Thread.sleep(2000);
-			l.verfyTittle("dssd");
+			l.verfyTittle("dssd","Application login fail");
 		}
 		
 		

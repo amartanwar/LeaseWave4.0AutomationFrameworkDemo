@@ -17,7 +17,7 @@ public class LoginPage extends BasePage
 	private WebElement rideTheLeaseWave;
 	
 	@FindBy(id="ctl00_FT_PH_loginControl_txtUserName")
-	private WebElement userName;
+	public WebElement userName;
 	
 	@FindBy(id="ctl00_FT_PH_loginControl_txtPassword")
 	private WebElement password;

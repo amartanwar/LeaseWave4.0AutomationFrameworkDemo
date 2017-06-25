@@ -11,6 +11,10 @@ public  class AssetListPage extends BasePage
 	@FindBy(id="ctl00_Fr_PH_cmdAdd_cmdButtonControl")
 	private WebElement adddButton;
 	
+	@FindBy(id="ctl00_ctl04_lnkSignOut")
+	public WebElement pageTitle;
+	
+	
 	public AssetListPage(WebDriver driver) 
 	{
 		super(driver);
@@ -20,6 +24,8 @@ public  class AssetListPage extends BasePage
 	public void clickOnaddButton()
 	{
 		adddButton.click();
+		
 	}
-
+	
+	
 }

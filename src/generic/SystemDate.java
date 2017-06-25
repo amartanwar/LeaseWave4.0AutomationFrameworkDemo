@@ -5,11 +5,13 @@ import java.util.Date;
 
 public class SystemDate {
 
-	public static String date;
 
-	public static void main(String[] args) {
+	public static String currentDate()
+	{
 		SimpleDateFormat sd= new SimpleDateFormat("M-dd-yyyy");
-		 date=sd.format(new Date());
+		String date=sd.format(new Date());
+		return date;
+		
 		
 	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
