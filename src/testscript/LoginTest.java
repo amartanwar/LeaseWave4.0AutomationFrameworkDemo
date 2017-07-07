@@ -1,5 +1,7 @@
 package testscript;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 import generic.BaseTest;
 import pom.LoginPage;
@@ -7,7 +9,7 @@ import pom.LoginPage;
 public class LoginTest extends BaseTest  
 {
 	@Test
-	public void testLogin() throws InterruptedException
+	public void testLogin() throws InterruptedException, IOException
 	{
 		LoginPage l=new LoginPage(driver);
 		l.verfyTittle("LeaseWave","Application login fail");

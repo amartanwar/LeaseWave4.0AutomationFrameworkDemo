@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import generic.BasePage;
+
 public class AssetMenuPage extends BasePage
 {
 
@@ -39,5 +41,14 @@ public class AssetMenuPage extends BasePage
 	public void clickOnAssetProfile()
 	{
 		assetProfile.click();
+	}
+	public void clickOnvalueAndStatusChanges()
+	{
+		valueAndStatusChange.click();
+	}
+	
+	public void clickOnNonZero()
+	{
+		nonZero.click();
 	}
 }

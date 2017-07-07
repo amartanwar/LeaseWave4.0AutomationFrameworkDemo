@@ -24,7 +24,8 @@ public abstract class BaseTest implements AutoConst
 		
 		System.setProperty(IE_KEY,IE_VALUE);
 		driver=new InternetExplorerDriver();
-		
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
 		String url=excel.getCellValue("./TestData/Input.xlsx", "credentials", 1, 0);
 		String companyName=excel.getCellValue("./TestData/Input.xlsx", "credentials", 1, 1);
 		String userName=excel.getCellValue("./TestData/Input.xlsx", "credentials", 1, 2);

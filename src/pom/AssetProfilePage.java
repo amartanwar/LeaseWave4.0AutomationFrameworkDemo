@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import generic.BasePage;
 import generic.SystemDate;
 
 public class AssetProfilePage extends BasePage

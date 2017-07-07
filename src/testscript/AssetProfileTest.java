@@ -1,5 +1,7 @@
 package testscript;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
@@ -13,7 +15,7 @@ import pom.LeaseWaveHeader;
 public class AssetProfileTest extends BaseTest 
 {
 	@Test
-	public void assetCreation() throws InterruptedException 
+	public void assetCreation() throws InterruptedException, IOException 
 	{
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		String type=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,1);
@@ -51,6 +53,7 @@ public class AssetProfileTest extends BaseTest
 		app.setCompany(company);
 		app.setDepartment(department);
 		app.clickOnSave();
+		app.verfyTittle("Vehicle Details","Asset Creation failed because of incorrect values entered");
 		app.clickOnVehicleDetailsSaveButton();
 		app.clickOnAssetProfileGlobalClose();
 		Thread.sleep(3000);
