@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import generic.BasePage;
+import generic.SystemDate;
 
 public class LeaseStructurePage extends BasePage
 {
@@ -48,9 +49,82 @@ public class LeaseStructurePage extends BasePage
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
 	private WebElement saveButton;
 
-	public LeaseStructurePage(WebDriver driver) {
+	public LeaseStructurePage(WebDriver driver) 
+	{
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
-
+	
+	public void enterNumberofPayments(String paymentsNumber)
+	{
+		numberOfPayments.sendKeys(paymentsNumber);
+	}
+	
+	public void enterNumberOfPaymentsDueOnCommencement(String paymentsDue)
+	{
+		numberOfPaymentsDueOnCommencement.sendKeys(paymentsDue);
+	}
+	
+	public void enterCommencementDate(String date)
+	{
+		commencementDate.sendKeys(date);
+	}
+	
+	public void enterCommencementDate()
+	{
+		commencementDate.sendKeys(SystemDate.currentDate());
+	}
+	
+	public void enterRegularRentalExecutoryFee(String fee)
+	{
+		regularRentalExecutoryFee.sendKeys(fee);
+	}
+	
+	public void enterRegularNonRentalExecutoryFee(String fee)
+	{
+		regularNonRentalExecutoryFee.sendKeys(fee);
+	}
+	
+	public void enterRegularAdminFee(String fee)
+	{
+		regularAdminFee.sendKeys(fee);
+	}
+	
+	public void enterRegularTotalPayment(String fee)
+	{
+		regularTotalPayment.sendKeys(fee);
+	}
+	
+	public void enterCommencementRentalExecutoryFee(String fee)
+	{
+		commencementRentalExecutoryFee.sendKeys(fee);
+	}
+	
+	public void enterCommencementNonRentalExecutoryFee(String fee)
+	{
+		commencementNonRentalExecutoryFee.sendKeys(fee);
+	}
+	
+	public void enterCommencementAdminFee(String fee)
+	{
+		commencementAdminFee.sendKeys(fee);
+	}
+	
+	public void enterCommencementTotalPayment(String fee)
+	{
+		commencementTotalPayment.sendKeys(fee);
+	}
+	
+	public void enterGLPostDate()
+	{
+		glPostDate.sendKeys(SystemDate.currentDate());
+	}
+	
+	public void clickOnSaveButton()
+	{
+		saveButton.click();
+	}
+	
 }
+
+

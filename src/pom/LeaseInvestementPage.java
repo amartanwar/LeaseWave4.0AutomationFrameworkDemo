@@ -12,9 +12,15 @@ public class LeaseInvestementPage extends BasePage
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
 	private WebElement saveButton;
 	
-	public LeaseInvestementPage(WebDriver driver) {
+	public LeaseInvestementPage(WebDriver driver)
+	{
 		super(driver);
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void clickOnSaveButton()
+	{
+		saveButton.click();
 	}
 
 }

@@ -2,9 +2,9 @@ package pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import generic.BasePage;
 
 public class AssetMenuPage extends BasePage
@@ -18,6 +18,9 @@ public class AssetMenuPage extends BasePage
 	
 	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_3_11']/td/div")
 	private WebElement valueAndStatusChange;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_3_11_1']/td/div")
+	private WebElement Zero;
 	
 	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_3_11_2']/td/div")
 	private WebElement nonZero;
@@ -47,8 +50,15 @@ public class AssetMenuPage extends BasePage
 		valueAndStatusChange.click();
 	}
 	
-	public void clickOnNonZero()
+	public void openAssetCostAssignmentPage() throws InterruptedException
 	{
-		nonZero.click();
+			Actions action=new Actions(driver);
+			action.moveToElement(assetLink).perform();
+			Thread.sleep(2000);
+			action.moveToElement(valueAndStatusChange).perform();
+			Thread.sleep(2000);
+			action.moveToElement(Zero);
+			Thread.sleep(2000);
+			action.moveToElement(nonZero).click().perform();
 	}
 }

@@ -21,7 +21,7 @@ public abstract class BasePage {
 	
 	public void verfyTittle(String eTitle,String msg) throws IOException, InterruptedException
 	{
-		WebDriverWait wait= new WebDriverWait(driver,5);
+		WebDriverWait wait= new WebDriverWait(driver,10);
 		
 		try
 		{

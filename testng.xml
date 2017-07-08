@@ -2,7 +2,8 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="testscript.LoginTest"/>
+     <class name="testscript.AssetProfileTest"/>
+     <class name="testscript.AssetCostAssignmentTest"/> 
     </classes>
   </test> 
-</suite> 
+</suite>

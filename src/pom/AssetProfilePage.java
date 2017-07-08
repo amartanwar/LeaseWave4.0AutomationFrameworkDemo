@@ -74,14 +74,14 @@ public class AssetProfilePage extends BasePage
 		unitNumber.sendKeys(un);
 	}
 	
-	public void setAcquiredDate(String date)
+	public void setAcquiredDate()
 	{
 		unitNumber.sendKeys(SystemDate.currentDate());
 	}
 	
-	public void setAcquiredDate()
+	public void setAcquiredDate(String date)
 	{
-		acquiredDate.sendKeys("6-18-2017");
+		acquiredDate.sendKeys(date);
 	}
 	
 	public void setAssetType(String assetType)

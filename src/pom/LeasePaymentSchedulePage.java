@@ -12,9 +12,15 @@ public class LeasePaymentSchedulePage extends BasePage
 	@FindBy(id="ctl00_Fr_PH_cmdClose_cmdButtonControl")
 	private WebElement closeButton;
 
-	public LeasePaymentSchedulePage(WebDriver driver) {
+	public LeasePaymentSchedulePage(WebDriver driver)
+	{
 		super(driver);
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void clickOnCloseButton()
+	{
+		closeButton.click();
 	}
 
 }

@@ -21,4 +21,13 @@ public class LeaseMenuPage extends BasePage
 		PageFactory.initElements(driver, this);
 	}
 
+	public void clickOnLeaseMenu()
+	{
+		leaseMenu.click();
+	}
+	
+	public void clickOnNewLease()
+	{
+		newLease.click();
+	}
 }

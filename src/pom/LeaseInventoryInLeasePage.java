@@ -4,8 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
+import generic.SystemDate;
 
 public class LeaseInventoryInLeasePage extends BasePage
 {
@@ -36,6 +39,48 @@ public class LeaseInventoryInLeasePage extends BasePage
 	public LeaseInventoryInLeasePage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void clickOnAddButon()
+	{
+		addButton.click();
+		for(String winHandle: driver.getWindowHandles())
+		{
+			driver.switchTo().window(winHandle);
+		}
+	}
+	
+	public void clickOnEditButton()
+	{
+		WebDriverWait wt= new WebDriverWait(driver, 20);
+		wt.until(ExpectedConditions.visibilityOf(addButton));
+		addButton.click();
+	}
+	
+	public void enterOdometerReading(String odoMeterReading)
+	{
+		deliveryOdometerReading.sendKeys(odoMeterReading);
+	}
+	
+	public void enterDeliverydate()
+	{
+		deliveryDate.sendKeys(SystemDate.currentDate());
+	}
+	
+	public void enterDeliverydate(String date)
+	{
+		deliveryDate.sendKeys(date);
+	}
+	
+	public void clickOnGridSaveButton()
+	{
+		gridSaveButton.click();
+	}
+	
+	public void clickOnPageSaveButton() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		PageSaveButton.click();
 	}
 
 }

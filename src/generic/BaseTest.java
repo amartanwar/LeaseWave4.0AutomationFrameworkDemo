@@ -19,9 +19,6 @@ public abstract class BaseTest implements AutoConst
 	@BeforeClass
 	public void openApplication() throws InterruptedException
 	{
-//		System.setProperty(CHROME_KEY,CHROME_VALUE);
-//		driver=new ChromeDriver();
-		
 		System.setProperty(IE_KEY,IE_VALUE);
 		driver=new InternetExplorerDriver();
 		driver.manage().window().maximize();
@@ -43,15 +40,10 @@ public abstract class BaseTest implements AutoConst
 		
 		WebDriverWait wait= new WebDriverWait(driver, 56);
 		wait.until(ExpectedConditions.visibilityOf(lp.userName));
-		
-		
-		
-			lp.setuserName(userName);
-			lp.setPassword(password);
-			lp.clickOnLogin();
+		lp.setuserName(userName);
+		lp.setPassword(password);
+		lp.clickOnLogin();
 	}
-	
-
 	
 	@AfterClass
 	public void closeApplication()

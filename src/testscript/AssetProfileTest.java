@@ -15,7 +15,7 @@ import pom.LeaseWaveHeader;
 public class AssetProfileTest extends BaseTest 
 {
 	@Test
-	public void assetCreation() throws InterruptedException, IOException 
+	public void AssetProfileCreationTest() throws InterruptedException, IOException 
 	{
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		String type=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,1);

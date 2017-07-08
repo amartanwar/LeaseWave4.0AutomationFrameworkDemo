@@ -16,5 +16,10 @@ public class LeaseIDCSetupPage extends BasePage
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void clickOnCloseButton()
+	{
+		closeButton.click();
+	}
 
 }

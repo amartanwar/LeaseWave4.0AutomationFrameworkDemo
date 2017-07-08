@@ -16,12 +16,22 @@ public class CreateNewLeasePage extends BasePage
 	private WebElement sequenceNumber;
 
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
-	private WebElement SaveButton;
+	private WebElement saveButton;
 	
 	public CreateNewLeasePage(WebDriver driver)
 	{
 		super(driver);
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void enterLeaseSequenceNumber(String leaseSequenceNumber)
+	{
+		sequenceNumber.sendKeys(leaseSequenceNumber);
+	}
+	
+	public void clcikOnSaveButton()
+	{
+		saveButton.click();
 	}
 
 }

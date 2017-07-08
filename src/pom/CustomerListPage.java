@@ -24,4 +24,18 @@ public class CustomerListPage extends BasePage
 		PageFactory.initElements(driver, this);
 	}
 
+	public void enterAccountNumber(String accountNum)
+	{
+		accountNumber.sendKeys(accountNum);
+	}
+	
+	public void clickOnsearchButton()
+	{
+		searchButton.click();
+	}
+	
+	public void clickOnSelectButton()
+	{
+		selectButton.click();
+	}
 }
