@@ -1,9 +1,12 @@
 package pom;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
 
@@ -29,6 +32,15 @@ public class LeaseAccrualPage extends BasePage
 	public void clickOnSaveButton()
 	{
 		saveButton.click();
+	}
+	
+	public void handlePopup()
+	{
+		WebDriverWait wt=new WebDriverWait(driver, 100);
+		wt.until(ExpectedConditions.alertIsPresent());
+		Alert alert = driver.switchTo().alert();
+		System.out.println(alert.getText());
+		alert.accept();
 	}
 
 }

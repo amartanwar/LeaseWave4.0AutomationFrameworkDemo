@@ -55,9 +55,9 @@ public class LeaseStructurePage extends BasePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void enterNumberofPayments(String paymentsNumber)
+	public void enterNumberofPayments(String payments)
 	{
-		numberOfPayments.sendKeys(paymentsNumber);
+		numberOfPayments.sendKeys(payments);
 	}
 	
 	public void enterNumberOfPaymentsDueOnCommencement(String paymentsDue)
@@ -124,6 +124,7 @@ public class LeaseStructurePage extends BasePage
 	{
 		saveButton.click();
 	}
+
 	
 }
 

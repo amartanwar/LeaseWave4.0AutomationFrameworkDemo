@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
 
@@ -33,21 +35,29 @@ public  class LeaseWaveHeader extends BasePage
 	
 	public void clickOnPortFolioManagement()
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 10);
+		wt.until(ExpectedConditions.visibilityOf(portFoliomanagement));
 		portFoliomanagement.click();
 	}
 	
 	public void clickOnoriginationAndInstallation()
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 10);
+		wt.until(ExpectedConditions.visibilityOf(originationAndInstallation));
 		originationAndInstallation.click();
 	}
 	
 	public void clickOngeneralLedger()
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 10);
+		wt.until(ExpectedConditions.visibilityOf(generalLedger));
 		generalLedger.click();
 	}
 	
 	public void clickOnsetup()
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 10);
+		wt.until(ExpectedConditions.visibilityOf(setup));
 		setup.click();
 	}
 	

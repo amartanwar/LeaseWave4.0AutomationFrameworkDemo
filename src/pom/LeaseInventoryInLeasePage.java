@@ -41,9 +41,10 @@ public class LeaseInventoryInLeasePage extends BasePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickOnAddButon()
+	public void clickOnAddButon() throws InterruptedException
 	{
 		addButton.click();
+		Thread.sleep(2000);
 		for(String winHandle: driver.getWindowHandles())
 		{
 			driver.switchTo().window(winHandle);
@@ -53,17 +54,21 @@ public class LeaseInventoryInLeasePage extends BasePage
 	public void clickOnEditButton()
 	{
 		WebDriverWait wt= new WebDriverWait(driver, 20);
-		wt.until(ExpectedConditions.visibilityOf(addButton));
-		addButton.click();
+		wt.until(ExpectedConditions.elementToBeClickable(editButton));
+		editButton.click();
 	}
 	
 	public void enterOdometerReading(String odoMeterReading)
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 20);
+		wt.until(ExpectedConditions.elementToBeClickable(deliveryOdometerReading));
 		deliveryOdometerReading.sendKeys(odoMeterReading);
 	}
 	
 	public void enterDeliverydate()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 20);
+		wt.until(ExpectedConditions.elementToBeClickable(deliveryDate));
 		deliveryDate.sendKeys(SystemDate.currentDate());
 	}
 	
@@ -81,6 +86,19 @@ public class LeaseInventoryInLeasePage extends BasePage
 	{
 		Thread.sleep(2000);
 		PageSaveButton.click();
+	}
+	public void selectAsset()
+	{
+		WebDriverWait wt= new WebDriverWait(driver, 20);
+		wt.until(ExpectedConditions.visibilityOf(selectCheckBox));
+		selectCheckBox.click();
+	}
+	
+	public void selectPrimaryAsset()
+	{
+		WebDriverWait wt= new WebDriverWait(driver, 20);
+		wt.until(ExpectedConditions.visibilityOf(primaryAsset));
+		primaryAsset.click();
 	}
 
 }

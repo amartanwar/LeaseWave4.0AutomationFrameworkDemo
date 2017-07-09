@@ -76,7 +76,7 @@ public class AssetProfilePage extends BasePage
 	
 	public void setAcquiredDate()
 	{
-		unitNumber.sendKeys(SystemDate.currentDate());
+		acquiredDate.sendKeys(SystemDate.currentDate());
 	}
 	
 	public void setAcquiredDate(String date)

@@ -10,28 +10,28 @@ import generic.BasePage;
 
 public class LeaseProfilePage extends BasePage
 {
-	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="ctl00_F_PH_cboOverTermPaymentARGLTemplateID_cboGLTransaction")
 	private WebElement  otpARGLTemplate;
 
-	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="ctl00_F_PH_cboOverTermPaymentIncomeGLTemplateID_cboGLTransaction")
 	private WebElement otpIncomeGLTemplate;
 
-	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="cctl00_F_PH_GLSegmentAssignment_grdGLSegmentAssignment_ci_0_3_0_cboSegmentValue")
 	private WebElement glCompany;
 
-	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="ctl00_F_PH_GLSegmentAssignment_grdGLSegmentAssignment_ci_0_3_1_cboSegmentValue")
 	private WebElement glDepartment;
 
-	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="ctl00_F_PH_cboReceiptCashGLTemplateID_cboGLTransaction")
 	private WebElement receiptCashGLTemplate;
 
-	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="ctl00_F_PH_cboInterimRentalGLTemplate_cboGLTransaction")
 	private WebElement interimRentGLTemplate;
 
-	@FindBy(id="ctl00_FPH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="ctl00_F_PH_cboProductChargeBillingType_cboComboBoxControl")
 	private WebElement productChargeBillingType;
 
-	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
+	@FindBy(id="ctl00_F_PH_cboLeaseRentalBillingType_cboComboBoxControl")
 	private WebElement leaseRentalBillingType;
 
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
@@ -43,9 +43,9 @@ public class LeaseProfilePage extends BasePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void selectOtpIncomeGLTemplate()
+	public void selectOtpARGLTemplate()
 	{
-		Select se= new Select(otpIncomeGLTemplate);
+		Select se= new Select(otpARGLTemplate);
 		se.selectByIndex(1);
 	}
 	

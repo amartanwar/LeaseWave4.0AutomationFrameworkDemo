@@ -5,7 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import generic.BasePage;
 
 public class AssetValueAndStatusChangePage extends BasePage
@@ -27,6 +30,9 @@ public class AssetValueAndStatusChangePage extends BasePage
 
 	@FindBy(id="ctl00_F_PH_cboGLTemplate_cboGLTransaction")
 	private WebElement glTemplate;
+	
+	@FindBy(id="ctl00_Fr_PH_cmdClose_cmdButtonControl")
+	private WebElement closeButton;
 
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
 	private WebElement saveButton;
@@ -48,8 +54,8 @@ public class AssetValueAndStatusChangePage extends BasePage
 	}
 	public void enterCostOfAsset(String cost)
 	{
-//		WebDriverWait wt= new WebDriverWait(driver, 5);
-//		wt.until(ExpectedConditions.visibilityOf(costAssignmentTextbox));
+		WebDriverWait wt= new WebDriverWait(driver, 5);
+		wt.until(ExpectedConditions.visibilityOf(costAssignmentTextbox));
 		costAssignmentTextbox.sendKeys(cost);
 	}
 	
@@ -76,8 +82,18 @@ public class AssetValueAndStatusChangePage extends BasePage
 	
 	public void handlePopup()
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 10);
+		wt.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
 		System.out.println(alert.getText());
 		alert.accept();
+	}
+	
+	public void clickOnCloseButton()
+	{
+		if(closeButton.isDisplayed()==true)
+		{
+			closeButton.click();
+		}
 	}
 }

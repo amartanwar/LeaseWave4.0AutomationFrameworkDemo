@@ -8,9 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import generic.ScreenShot;
-
-public abstract class BasePage {
+public abstract class BasePage implements AutoConst {
 	public WebDriver driver;
 	
 	public BasePage(WebDriver driver)
@@ -30,14 +28,9 @@ public abstract class BasePage {
 		}
 		catch(Exception e)
 		{
-			ScreenShot s=new ScreenShot(driver);
-			s.takeScreenshot();
+//			ScreenShot.takeScreenshot(driver,SNAP_PATH);
 			Reporter.log(msg,true);
 			Assert.fail();
-		
 		}
 	}
-	
-	
-
 }

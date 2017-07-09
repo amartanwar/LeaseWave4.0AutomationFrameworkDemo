@@ -10,6 +10,13 @@
           <include name="openApplication"/>
         </methods>
       </class> <!-- testscript.AssetCostAssignmentTest -->
+      <class name="testscript.AssetProfileTest">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="AssetProfileCreationTest"/>
+        </methods>
+      </class> <!-- testscript.AssetProfileTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
