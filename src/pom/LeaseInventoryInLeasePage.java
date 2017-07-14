@@ -53,21 +53,21 @@ public class LeaseInventoryInLeasePage extends BasePage
 	
 	public void clickOnEditButton()
 	{
-		WebDriverWait wt= new WebDriverWait(driver, 20);
+		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.elementToBeClickable(editButton));
 		editButton.click();
 	}
 	
 	public void enterOdometerReading(String odoMeterReading)
 	{
-		WebDriverWait wt= new WebDriverWait(driver, 20);
+		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.elementToBeClickable(deliveryOdometerReading));
 		deliveryOdometerReading.sendKeys(odoMeterReading);
 	}
 	
 	public void enterDeliverydate()
 	{
-		WebDriverWait wt= new WebDriverWait(driver, 20);
+		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.elementToBeClickable(deliveryDate));
 		deliveryDate.sendKeys(SystemDate.currentDate());
 	}
@@ -89,14 +89,14 @@ public class LeaseInventoryInLeasePage extends BasePage
 	}
 	public void selectAsset()
 	{
-		WebDriverWait wt= new WebDriverWait(driver, 20);
+		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(selectCheckBox));
 		selectCheckBox.click();
 	}
 	
 	public void selectPrimaryAsset()
 	{
-		WebDriverWait wt= new WebDriverWait(driver, 20);
+		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(primaryAsset));
 		primaryAsset.click();
 	}

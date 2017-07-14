@@ -1,71 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[Pass:Title is Matching]]>
-    </line>
-    <line>
-      <![CDATA[Pass:Title is Matching]]>
-    </line>
-    <line>
-      <![CDATA[Pass:Title is Matching]]>
-    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="69941" started-at="2017-07-09T11:10:27Z" finished-at="2017-07-09T11:11:37Z">
+  <suite name="Default suite" duration-ms="21089" started-at="2017-07-14T19:57:00Z" finished-at="2017-07-14T19:57:21Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="69941" started-at="2017-07-09T11:10:27Z" finished-at="2017-07-09T11:11:37Z">
-      <class name="testscript.AssetCostAssignmentTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetCostAssignmentTest@1629756]" name="openApplication" is-config="true" duration-ms="8790" started-at="2017-07-09T16:41:01Z" finished-at="2017-07-09T16:41:10Z">
+    <test name="Default test" duration-ms="21089" started-at="2017-07-14T19:57:00Z" finished-at="2017-07-14T19:57:21Z">
+      <class name="testscript.LtrToArUpdatetest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.LtrToArUpdatetest@1081592]" name="openApplication" is-config="true" duration-ms="10484" started-at="2017-07-15T01:27:00Z" finished-at="2017-07-15T01:27:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="costAssignmentTest()[pri:0, instance:testscript.AssetCostAssignmentTest@1629756]" name="costAssignmentTest" duration-ms="24273" started-at="2017-07-09T16:41:10Z" finished-at="2017-07-09T16:41:34Z">
+        <test-method status="PASS" signature="testLtrToArUpdate()[pri:0, instance:testscript.LtrToArUpdatetest@1081592]" name="testLtrToArUpdate" duration-ms="10588" started-at="2017-07-15T01:27:10Z" finished-at="2017-07-15T01:27:21Z">
           <reporter-output>
-            <line>
-              <![CDATA[Pass:Title is Matching]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- costAssignmentTest -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetCostAssignmentTest@1629756]" name="closeApplication" is-config="true" duration-ms="2687" started-at="2017-07-09T16:41:34Z" finished-at="2017-07-09T16:41:37Z">
+        </test-method> <!-- testLtrToArUpdate -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.LtrToArUpdatetest@1081592]" name="closeApplication" is-config="true" duration-ms="2" started-at="2017-07-15T01:27:21Z" finished-at="2017-07-15T01:27:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=costAssignmentTest status=SUCCESS method=AssetCostAssignmentTest.costAssignmentTest()[pri:0, instance:testscript.AssetCostAssignmentTest@1629756] output=Pass:Title is Matching]]]>
+                <![CDATA[[TestResult name=testLtrToArUpdate status=SUCCESS method=LtrToArUpdatetest.testLtrToArUpdate()[pri:0, instance:testscript.LtrToArUpdatetest@1081592] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- testscript.AssetCostAssignmentTest -->
-      <class name="testscript.AssetProfileTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetProfileTest@19a81e8]" name="openApplication" is-config="true" duration-ms="10060" started-at="2017-07-09T16:40:27Z" finished-at="2017-07-09T16:40:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="AssetCreationTest()[pri:0, instance:testscript.AssetProfileTest@19a81e8]" name="AssetCreationTest" duration-ms="21293" started-at="2017-07-09T16:40:37Z" finished-at="2017-07-09T16:40:58Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Pass:Title is Matching]]>
-            </line>
-            <line>
-              <![CDATA[Pass:Title is Matching]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- AssetCreationTest -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetProfileTest@19a81e8]" name="closeApplication" is-config="true" duration-ms="2817" started-at="2017-07-09T16:40:58Z" finished-at="2017-07-09T16:41:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AssetCreationTest status=SUCCESS method=AssetProfileTest.AssetCreationTest()[pri:0, instance:testscript.AssetProfileTest@19a81e8] output=Pass:Title is Matching]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- testscript.AssetProfileTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- testscript.LtrToArUpdatetest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

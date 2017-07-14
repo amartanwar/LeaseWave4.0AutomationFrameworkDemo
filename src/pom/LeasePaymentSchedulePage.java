@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
 
@@ -20,6 +22,8 @@ public class LeasePaymentSchedulePage extends BasePage
 	
 	public void clickOnCloseButton()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 300);
+		wt.until(ExpectedConditions.titleContains("Payment Schedule"));
 		closeButton.click();
 	}
 

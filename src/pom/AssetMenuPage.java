@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import generic.BasePage;
 
 public class AssetMenuPage extends BasePage
@@ -38,11 +41,15 @@ public class AssetMenuPage extends BasePage
 	
 	public void clickOnAssetMenu()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(assetLink));
 		assetLink.click();
 	}
 	
 	public void clickOnAssetProfile()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(assetProfile));
 		assetProfile.click();
 	}
 	public void clickOnvalueAndStatusChanges()
@@ -52,13 +59,21 @@ public class AssetMenuPage extends BasePage
 	
 	public void openAssetCostAssignmentPage() throws InterruptedException
 	{
+		    WebDriverWait wt= new WebDriverWait(driver, 60);
+		    wt.until(ExpectedConditions.visibilityOf(assetLink));
 			Actions action=new Actions(driver);
 			action.moveToElement(assetLink).perform();
-			Thread.sleep(2000);
+			
+			WebDriverWait wt1= new WebDriverWait(driver, 60);
+		    wt1.until(ExpectedConditions.visibilityOf(valueAndStatusChange));
 			action.moveToElement(valueAndStatusChange).perform();
-			Thread.sleep(2000);
+			
+			WebDriverWait wt2= new WebDriverWait(driver, 60);
+		    wt2.until(ExpectedConditions.visibilityOf(Zero));
 			action.moveToElement(Zero);
-			Thread.sleep(2000);
+			
+			WebDriverWait wt3= new WebDriverWait(driver, 60);
+		    wt3.until(ExpectedConditions.visibilityOf(nonZero));
 			action.moveToElement(nonZero).click().perform();
 	}
 }

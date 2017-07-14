@@ -28,7 +28,6 @@ public abstract class BasePage implements AutoConst {
 		}
 		catch(Exception e)
 		{
-//			ScreenShot.takeScreenshot(driver,SNAP_PATH);
 			Reporter.log(msg,true);
 			Assert.fail();
 		}

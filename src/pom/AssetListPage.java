@@ -43,29 +43,30 @@ public  class AssetListPage extends BasePage
 	
 	public void clickOnaddButton()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(adddButton));
 		adddButton.click();
 		
 	}
 	
-	public void searchByUnitNumber(String unitNumber)
+	public void searchByUnitNumber(String unitNumber) throws InterruptedException
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 20);
-		wt.until(ExpectedConditions.visibilityOf(unitnumber));
+		WebDriverWait wt1=new WebDriverWait(driver, 60);
+		wt1.until(ExpectedConditions.elementToBeClickable(unitnumber));
 		unitnumber.sendKeys(unitNumber);
 	}
 	
-	public void clickOnSearchButton()
+	public void clickOnSearchButton() throws InterruptedException
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		Thread.sleep(200);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(searchButton));
 		searchButton.click();
 	}
 	
 	public void selectCheckBox()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(chkBox));
 		chkBox.click();
 		
@@ -73,7 +74,7 @@ public  class AssetListPage extends BasePage
 	
 	public void clickONSelectButton()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(selectButton));
 		selectButton.click();
 		
@@ -81,7 +82,7 @@ public  class AssetListPage extends BasePage
 	
 	public void clickOnSelectExportButton()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(selectExportButton));
 		selectExportButton.click();
 	}

@@ -39,9 +39,6 @@ public class AssetCostAssignmentTest extends BaseTest
 		asvl.clickOnSaveButton();
 		asvl.handlePopup();
 		asvl.verfyTittle("Asset List", "failed");
-		
-				
-		
 	}
 	
 	

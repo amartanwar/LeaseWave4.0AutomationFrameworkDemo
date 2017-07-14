@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
 import generic.SystemDate;
@@ -20,28 +22,28 @@ public class LeaseStructurePage extends BasePage
 	private WebElement commencementDate;
 
 	@FindBy(id="igtxtctl00_F_PH_txtInceptionRentalExecutoryFeesAmount_txtWebCurrencyEdit")
-	private WebElement regularRentalExecutoryFee;
-
-	@FindBy(id="igtxtctl00_F_PH_txtInceptionNonRentalExecutoryFeesAmount_txtWebCurrencyEdit")
-	private WebElement regularNonRentalExecutoryFee; 
-
-	@FindBy(id="igtxtctl00_F_PH_txtInceptionAdminFeeAmount_txtWebCurrencyEdit")
-	private WebElement regularAdminFee;
-
-	@FindBy(id="igtxtctl00_F_PH_txtInceptionPaymentAmount_txtWebCurrencyEdit")
-	private WebElement regularTotalPayment; 
-
-	@FindBy(id="igtxtctl00_F_PH_txtRegularRentalExecutoryFee_txtWebCurrencyEdit")
 	private WebElement commencementRentalExecutoryFee;
 
-	@FindBy(id="igtxtctl00_F_PH_txtRegularNonRentalExecutoryFee_txtWebCurrencyEdit")
+	@FindBy(id="igtxtctl00_F_PH_txtInceptionNonRentalExecutoryFeesAmount_txtWebCurrencyEdit")
 	private WebElement commencementNonRentalExecutoryFee; 
 
-	@FindBy(id="igtxtctl00_F_PH_txtRegularAdminFeeAmount_txtWebCurrencyEdit")
+	@FindBy(id="igtxtctl00_F_PH_txtInceptionAdminFeeAmount_txtWebCurrencyEdit")
 	private WebElement commencementAdminFee;
 
-	@FindBy(id="igtxtctl00_F_PH_txtRegularPaymentAmount_txtWebCurrencyEdit")
+	@FindBy(id="igtxtctl00_F_PH_txtInceptionPaymentAmount_txtWebCurrencyEdit")
 	private WebElement commencementTotalPayment; 
+
+	@FindBy(id="igtxtctl00_F_PH_txtRegularRentalExecutoryFee_txtWebCurrencyEdit")
+	private WebElement regularRentalExecutoryFee;
+
+	@FindBy(id="igtxtctl00_F_PH_txtRegularNonRentalExecutoryFee_txtWebCurrencyEdit")
+	private WebElement regularNonRentalExecutoryFee; 
+
+	@FindBy(id="igtxtctl00_F_PH_txtRegularAdminFeeAmount_txtWebCurrencyEdit")
+	private WebElement regularAdminFee;
+
+	@FindBy(id="igtxtctl00_F_PH_txtRegularPaymentAmount_txtWebCurrencyEdit")
+	private WebElement regularTotalPayment; 
 
 	@FindBy(id="ctl00_F_PH_txtPostDate_input")
 	private WebElement glPostDate;
@@ -57,6 +59,8 @@ public class LeaseStructurePage extends BasePage
 	
 	public void enterNumberofPayments(String payments)
 	{
+		WebDriverWait wt =new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(numberOfPayments));
 		numberOfPayments.sendKeys(payments);
 	}
 	
@@ -72,6 +76,8 @@ public class LeaseStructurePage extends BasePage
 	
 	public void enterCommencementDate()
 	{
+		WebDriverWait wt =new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(commencementDate));
 		commencementDate.sendKeys(SystemDate.currentDate());
 	}
 	
@@ -87,11 +93,13 @@ public class LeaseStructurePage extends BasePage
 	
 	public void enterRegularAdminFee(String fee)
 	{
+		regularAdminFee.clear();
 		regularAdminFee.sendKeys(fee);
 	}
 	
 	public void enterRegularTotalPayment(String fee)
 	{
+		regularTotalPayment.clear();
 		regularTotalPayment.sendKeys(fee);
 	}
 	

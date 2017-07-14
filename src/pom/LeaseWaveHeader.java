@@ -35,28 +35,28 @@ public  class LeaseWaveHeader extends BasePage
 	
 	public void clickOnPortFolioManagement()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(portFoliomanagement));
 		portFoliomanagement.click();
 	}
 	
 	public void clickOnoriginationAndInstallation()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(originationAndInstallation));
 		originationAndInstallation.click();
 	}
 	
 	public void clickOngeneralLedger()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(generalLedger));
 		generalLedger.click();
 	}
 	
 	public void clickOnsetup()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(setup));
 		setup.click();
 	}

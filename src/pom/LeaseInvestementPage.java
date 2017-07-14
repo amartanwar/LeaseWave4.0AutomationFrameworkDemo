@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
 
@@ -20,6 +22,9 @@ public class LeaseInvestementPage extends BasePage
 	
 	public void clickOnSaveButton()
 	{
+		WebDriverWait wt =new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.elementToBeClickable(saveButton));
+		System.out.println(driver.getTitle());
 		saveButton.click();
 	}
 

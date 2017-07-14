@@ -57,13 +57,13 @@ public abstract class BaseTest implements AutoConst
 		String testName=result.getName();
 		int status=result.getStatus();
 		System.out.println(testName);
-		Thread.sleep(2000);
 		if(status==ITestResult.FAILURE)
 		{
 			ScreenShot.takeScreenshot(driver,SNAP_PATH+testName);
+			
 		}
 		//closing the browser
-		driver.quit();
+//		driver.quit();
 	}
 	
 

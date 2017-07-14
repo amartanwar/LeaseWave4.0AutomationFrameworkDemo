@@ -4,6 +4,7 @@
     <classes>
      <class name="testscript.AssetProfileTest"/>
      <class name="testscript.AssetCostAssignmentTest"/> 
+     <class name="testscript.LeaseProfileTest"/> 
     </classes>
   </test> 
 </suite>

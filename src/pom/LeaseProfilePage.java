@@ -1,12 +1,17 @@
 package pom;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
+import generic.ScrollOptions;
 
 public class LeaseProfilePage extends BasePage
 {
@@ -16,7 +21,7 @@ public class LeaseProfilePage extends BasePage
 	@FindBy(id="ctl00_F_PH_cboOverTermPaymentIncomeGLTemplateID_cboGLTransaction")
 	private WebElement otpIncomeGLTemplate;
 
-	@FindBy(id="cctl00_F_PH_GLSegmentAssignment_grdGLSegmentAssignment_ci_0_3_0_cboSegmentValue")
+	@FindBy(id="ctl00_F_PH_GLSegmentAssignment_grdGLSegmentAssignment_ci_0_3_0_cboSegmentValue")
 	private WebElement glCompany;
 
 	@FindBy(id="ctl00_F_PH_GLSegmentAssignment_grdGLSegmentAssignment_ci_0_3_1_cboSegmentValue")
@@ -36,6 +41,9 @@ public class LeaseProfilePage extends BasePage
 
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
 	private WebElement saveButton;
+	
+	@FindBy( id="ctl00_F_PH_Label1")
+	private WebElement randomclick;
 
 	public LeaseProfilePage(WebDriver driver) 
 	{
@@ -45,6 +53,8 @@ public class LeaseProfilePage extends BasePage
 	
 	public void selectOtpARGLTemplate()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 300);
+		wt.until(ExpectedConditions.titleContains("Lease Profile"));
 		Select se= new Select(otpARGLTemplate);
 		se.selectByIndex(1);
 	}
@@ -53,16 +63,24 @@ public class LeaseProfilePage extends BasePage
 	{
 		Select se= new Select(otpIncomeGLTemplate);
 		se.selectByIndex(1);
+		
+		
 	}
 	
-	public void selectGLCompany()
+	public void selectGLCompany() throws AWTException, InterruptedException
 	{
+		randomclick.click();
+		ScrollOptions.scrollingEndofAPage();
+		WebDriverWait et= new WebDriverWait(driver, 60);
+		et.until(ExpectedConditions.visibilityOf(glCompany));
 		Select se= new Select(glCompany);
 		se.selectByIndex(1);
 	}
 	
 	public void selectGLDepartment()
 	{
+		WebDriverWait et= new WebDriverWait(driver, 60);
+		et.until(ExpectedConditions.visibilityOf(glDepartment));
 		Select se= new Select(glDepartment);
 		se.selectByIndex(1);
 	}
@@ -81,12 +99,16 @@ public class LeaseProfilePage extends BasePage
 	
 	public void selectProductChargeBillingType()
 	{
+		WebDriverWait et= new WebDriverWait(driver, 60);
+		et.until(ExpectedConditions.visibilityOf(productChargeBillingType));
 		Select se= new Select(productChargeBillingType);
 		se.selectByIndex(1);
 	}
 	
 	public void selectLeaseRentalBillingType()
 	{
+		WebDriverWait et= new WebDriverWait(driver, 60);
+		et.until(ExpectedConditions.visibilityOf(leaseRentalBillingType));
 		Select se= new Select(leaseRentalBillingType);
 		se.selectByIndex(1);
 	}

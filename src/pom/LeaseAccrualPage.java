@@ -26,11 +26,16 @@ public class LeaseAccrualPage extends BasePage
 	
 	public void clickOnComputeYieldButton()
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 100);
+		wt.until(ExpectedConditions.visibilityOf(computeYieldButton));
+		System.out.println(driver.getTitle());
 		computeYieldButton.click();
 	}
 	
-	public void clickOnSaveButton()
+	public void clickOnSaveButton() throws InterruptedException
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 100);
+		wt.until(ExpectedConditions.elementToBeClickable(computeYieldButton));
 		saveButton.click();
 	}
 	

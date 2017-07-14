@@ -33,7 +33,7 @@ public class AssetValueAndStatusChangePage extends BasePage
 	
 	@FindBy(id="ctl00_Fr_PH_cmdClose_cmdButtonControl")
 	private WebElement closeButton;
-
+	
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
 	private WebElement saveButton;
 	
@@ -85,15 +85,21 @@ public class AssetValueAndStatusChangePage extends BasePage
 		WebDriverWait wt=new WebDriverWait(driver, 10);
 		wt.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
-		System.out.println(alert.getText());
 		alert.accept();
 	}
 	
 	public void clickOnCloseButton()
 	{
-		if(closeButton.isDisplayed()==true)
+		try
 		{
+			WebDriverWait wt=new WebDriverWait(driver, 10);
+			wt.until(ExpectedConditions.titleIs("Asset Value and Status Change - En Masse"));
 			closeButton.click();
 		}
+		catch(Exception e)
+		{
+			
+		}
+		 
 	}
 }

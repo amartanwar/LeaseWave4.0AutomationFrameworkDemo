@@ -1,8 +1,12 @@
 package testscript;
 
+import java.awt.AWTException;
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
+import generic.excel;
 import pom.AssetListPage;
 import pom.CreateNewLeasePage;
 import pom.CustomerListPage;
@@ -13,6 +17,7 @@ import pom.LeaseIDCSetupPage;
 import pom.LeaseInventoryInLeasePage;
 import pom.LeaseInvestementPage;
 import pom.LeaseMenuPage;
+import pom.LeasePaymentSchedulePage;
 import pom.LeaseProfilePage;
 import pom.LeaseStructurePage;
 import pom.LeaseWaveHeader;
@@ -20,8 +25,12 @@ import pom.LeaseWaveHeader;
 public class LeaseProfileTest extends BaseTest
 {
 	@Test
-	public void LeaseProfileCreationTest() throws InterruptedException
+	public void LeaseProfileCreationTest() throws InterruptedException, AWTException, IOException
 	{
+		//Fetching values from xl
+		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
+		
+		//Opening the lease lease creation page
 		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);
 		lwh.clickOnPortFolioManagement();
 		LeaseMenuPage lm=new LeaseMenuPage(driver);
@@ -36,7 +45,7 @@ public class LeaseProfileTest extends BaseTest
 		
 		//create new Lease screen
 		CreateNewLeasePage clp= new CreateNewLeasePage(driver);
-		clp.enterLeaseSequenceNumber("auto-11");
+		clp.enterLeaseSequenceNumber(un);
 		clp.clcikOnSaveButton();
 		
 		//LeaseInventoryInlease screen
@@ -45,7 +54,7 @@ public class LeaseProfileTest extends BaseTest
 		ilp.clickOnAddButon();
 		//AssetList page
 		AssetListPage asl=new AssetListPage(driver);
-		asl.searchByUnitNumber("auto-12");
+		asl.searchByUnitNumber(un);
 		asl.clickOnSearchButton();
 		asl.selectCheckBox();
 		Thread.sleep(2000);
@@ -69,11 +78,14 @@ public class LeaseProfileTest extends BaseTest
 		lp.selectGLDepartment();
 		lp.selectInterimRentGLTemplate();
 		lp.selectreceiptCashGLTemplate();
-		lp.selectLeaseRentalBillingType();
 		lp.selectProductChargeBillingType();
+		lp.selectLeaseRentalBillingType();
 		lp.clickOnSaveButton();
+	
 		
 		//leaseInvestment screen
+		LeaseEntryHomePage le=new LeaseEntryHomePage(driver);
+		le.clickOnInvestmentScreen();
 		LeaseInvestementPage li=new LeaseInvestementPage(driver);
 		li.clickOnSaveButton();
 		
@@ -82,13 +94,18 @@ public class LeaseProfileTest extends BaseTest
 		lIDC.clickOnCloseButton();
 		
 		//Lease Structure screen
+		le.clickOnStructureScreen();
 		LeaseStructurePage ls= new LeaseStructurePage(driver);
 		ls.enterNumberofPayments("12");
-		ls.enterCommencementDate("7/9/2017");
-		ls.enterCommencementTotalPayment("1200");
+		ls.enterCommencementDate("7/1/2017");
+		Thread.sleep(2000);
+		ls.enterRegularTotalPayment("1200");
+		ls.enterRegularAdminFee("1000");
 		ls.enterGLPostDate();
 		ls.clickOnSaveButton();
 		
+		LeasePaymentSchedulePage lps=new LeasePaymentSchedulePage(driver);
+		lps.clickOnCloseButton();
 		//Lease Classification screen
 		LeaseClassificationPage lc= new LeaseClassificationPage(driver);
 		lc.selectBargainPurchaseOption();
@@ -107,11 +124,13 @@ public class LeaseProfileTest extends BaseTest
 		la.handlePopup();
 		
 		//LeaseEntryHome screen
-		LeaseEntryHomePage le=new LeaseEntryHomePage(driver);
 		le.selectLeaseBookingStatus();
 		le.clickOnSaveButton();
-		le.handlePopup();
-		le.handlePopup();
+		le.handlePopup1();
+//		le.handlePopup2();
+		
+		//validating Result
+		le.verfyTittle("Lease List", "Lease creation test pass");
 	}
 
 }

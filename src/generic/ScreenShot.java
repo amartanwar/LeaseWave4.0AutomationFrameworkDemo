@@ -20,5 +20,8 @@ public  class ScreenShot
 		File srcFile=t.getScreenshotAs(OutputType.FILE);
 		File dstfile= new File(folder+date+".png");
 		FileUtils.copyFile(srcFile, dstfile);
+//		String filePath = dstfile.toString();
+//		String path = "<img src="\"file://"" alt="\"\"/" />";
+//		Reporter.log(path);
 	}
 }

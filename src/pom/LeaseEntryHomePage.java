@@ -13,7 +13,7 @@ import generic.BasePage;
 
 public class LeaseEntryHomePage extends BasePage
 {
-	@FindBy(id="ctl00_F_PH_ComputeYield_cmdButtonControl")
+	@FindBy(id="ctl00_NB_PH_UCLeaseEntyLink_cboBookingStatus")
 	private WebElement leaseBookingStatus;
 	
 	@FindBy(id="ctl00_NB_PH_UCLeaseEntyLink_cmdInvestment")
@@ -31,35 +31,72 @@ public class LeaseEntryHomePage extends BasePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void selectLeaseBookingStatus()
-	{
-		Select se=new Select(leaseBookingStatus);
-		se.selectByIndex(1);
-	}
-	
-	public void clickOnSaveButton()
-	{
-		saveButton.click();
-	}
-	
-	public void handlePopup()
-	{
-		WebDriverWait wt=new WebDriverWait(driver, 100);
-		wt.until(ExpectedConditions.alertIsPresent());
-		Alert alert = driver.switchTo().alert();
-		System.out.println(alert.getText());
-		alert.accept();
-	}
-	
 	public void clickOnStructureScreen()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.titleContains("Lease Entry Home"));
 		structureScreen.click();
 	}
 	
 	public void clickOnInvestmentScreen()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.titleContains("Lease Entry Home"));
+		System.out.println(driver.getTitle());
 		investmentScreen.click();
 	}
+	
+	public void selectLeaseBookingStatus()
+	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.titleContains("Lease Entry Home"));
+		Select se=new Select(leaseBookingStatus);
+		se.selectByIndex(1);
+	}
+	
+	public void clickOnSaveButton() throws InterruptedException
+	{
+		WebDriverWait wt=new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.titleIs("Lease Entry Home"));
+		saveButton.click();
+	}
+	
+	
+	public void handlePopup1()
+	{
+		for (int i=1;i<=3;i++)
+		{
+			try
+			{
+				WebDriverWait wt=new WebDriverWait(driver, 10);
+				wt.until(ExpectedConditions.alertIsPresent());
+				Alert alert = driver.switchTo().alert();
+				alert.accept();
+			}
+			catch (Exception e)
+			{
+				
+			}
+		}
+		
+	}
+//	
+//	public void handlePopup2()
+//	{
+//		try
+//		{
+//			WebDriverWait wt=new WebDriverWait(driver, 10);
+//			wt.until(ExpectedConditions.alertIsPresent());
+//			Alert alert = driver.switchTo().alert();
+//			alert.accept();
+//		}
+//		catch (Exception e)
+//		{
+//			
+//		}
+//	}
+	
+	
 	
 
 }
