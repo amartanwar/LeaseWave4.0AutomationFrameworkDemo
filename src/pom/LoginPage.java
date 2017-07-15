@@ -9,9 +9,6 @@ import generic.BasePage;
 
 public class LoginPage extends BasePage
 {
-
-
-	
 	@FindBy(id="ctl00_FT_PH_txtCompanyName")
 	private WebElement companyName;
 	

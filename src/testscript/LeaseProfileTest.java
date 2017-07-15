@@ -25,7 +25,7 @@ import pom.LeaseWaveHeader;
 public class LeaseProfileTest extends BaseTest
 {
 	@Test
-	public void LeaseProfileCreationTest() throws InterruptedException, AWTException, IOException
+	public void LeaseProfileCreationSmokeTest() throws InterruptedException, AWTException, IOException
 	{
 		//Fetching values from xl
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);

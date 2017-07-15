@@ -15,7 +15,7 @@ import pom.LeaseWaveHeader;
 public class AssetCostAssignmentTest extends BaseTest
 {
 	@Test
-	public void costAssignmentTest() throws InterruptedException, IOException
+	public void AssetCostAssignmentSmokeTest() throws InterruptedException, IOException
 	{
 		String unitNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);

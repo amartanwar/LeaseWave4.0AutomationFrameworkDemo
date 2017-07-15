@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Pass:Title is Matching]]>
+    </line>
+    <line>
+      <![CDATA[Pass:Title is Matching]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21089" started-at="2017-07-14T19:57:00Z" finished-at="2017-07-14T19:57:21Z">
+  <suite name="Default suite" duration-ms="40077" started-at="2017-07-15T18:57:04Z" finished-at="2017-07-15T18:57:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21089" started-at="2017-07-14T19:57:00Z" finished-at="2017-07-14T19:57:21Z">
-      <class name="testscript.LtrToArUpdatetest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.LtrToArUpdatetest@1081592]" name="openApplication" is-config="true" duration-ms="10484" started-at="2017-07-15T01:27:00Z" finished-at="2017-07-15T01:27:10Z">
+    <test name="Default test" duration-ms="40077" started-at="2017-07-15T18:57:04Z" finished-at="2017-07-15T18:57:44Z">
+      <class name="testscript.AssetProfileTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="openApplication" is-config="true" duration-ms="12134" started-at="2017-07-16T00:27:04Z" finished-at="2017-07-16T00:27:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="testLtrToArUpdate()[pri:0, instance:testscript.LtrToArUpdatetest@1081592]" name="testLtrToArUpdate" duration-ms="10588" started-at="2017-07-15T01:27:10Z" finished-at="2017-07-15T01:27:21Z">
+        <test-method status="PASS" signature="AssetCreationSmokeTest()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="AssetCreationSmokeTest" duration-ms="27119" started-at="2017-07-16T00:27:16Z" finished-at="2017-07-16T00:27:43Z">
           <reporter-output>
+            <line>
+              <![CDATA[Pass:Title is Matching]]>
+            </line>
+            <line>
+              <![CDATA[Pass:Title is Matching]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- testLtrToArUpdate -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.LtrToArUpdatetest@1081592]" name="closeApplication" is-config="true" duration-ms="2" started-at="2017-07-15T01:27:21Z" finished-at="2017-07-15T01:27:21Z">
+        </test-method> <!-- AssetCreationSmokeTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetProfileTest@1081592]" name="closeApplication" is-config="true" duration-ms="808" started-at="2017-07-16T00:27:43Z" finished-at="2017-07-16T00:27:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testLtrToArUpdate status=SUCCESS method=LtrToArUpdatetest.testLtrToArUpdate()[pri:0, instance:testscript.LtrToArUpdatetest@1081592] output={null}]]]>
+                <![CDATA[[TestResult name=AssetCreationSmokeTest status=SUCCESS method=AssetProfileTest.AssetCreationSmokeTest()[pri:0, instance:testscript.AssetProfileTest@1081592] output=Pass:Title is Matching]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- testscript.LtrToArUpdatetest -->
+      </class> <!-- testscript.AssetProfileTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

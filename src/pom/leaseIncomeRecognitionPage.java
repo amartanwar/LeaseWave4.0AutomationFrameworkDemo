@@ -6,11 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import generic.BasePage;
 
-public class MovingLongTermtoShorTermUpdatePage extends BasePage
+public class leaseIncomeRecognitionPage extends BasePage
 {
-
+	
 	@FindBy(id="ctl00_F_PH_LeaseBasedControlUC1_liLeaseFilter")
 	private WebElement leaseFilter;
 	
@@ -35,7 +36,7 @@ public class MovingLongTermtoShorTermUpdatePage extends BasePage
 	@FindBy(xpath="//*[@id='ctl00_GI_Box_Dis_Ara']/font/a")
 	private WebElement jobId;
 	
-	public MovingLongTermtoShorTermUpdatePage(WebDriver driver)
+	public leaseIncomeRecognitionPage(WebDriver driver)
 	{
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -84,14 +85,12 @@ public class MovingLongTermtoShorTermUpdatePage extends BasePage
 		runUpdate.click();
 	}
 	
-	public void clickOnJobId()
+	public void clickOnJobId() throws InterruptedException
 	{
+		Thread.sleep(1000);
 		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(jobId));
 		jobId.click();
 	}
 	
-	
-	
-
 }

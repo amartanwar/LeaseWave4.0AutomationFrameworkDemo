@@ -24,6 +24,9 @@ public class UpdatesMenuPage extends BasePage
 	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_4_3']/td/div")
 	private WebElement movingLongTermToShortTerm;
 	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_4_5']/td/div")
+	private WebElement incomeRecognition;
+	
 	public UpdatesMenuPage(WebDriver driver)
 	{
 		super(driver);
@@ -51,7 +54,26 @@ public class UpdatesMenuPage extends BasePage
 	
 	}
 	
+	public void openLeaseIncomeRecognition()
+	{
+		WebDriverWait wt1= new WebDriverWait(driver, 60);
+	    wt1.until(ExpectedConditions.visibilityOf(updateMenu));
+	    Actions action= new Actions(driver);
+		action.moveToElement(updateMenu).perform();
+		
+		WebDriverWait wt2= new WebDriverWait(driver, 60);
+	    wt2.until(ExpectedConditions.visibilityOf(lease));
+		action.moveToElement(lease).perform();
+		
+		WebDriverWait wt3= new WebDriverWait(driver, 60);
+	    wt3.until(ExpectedConditions.visibilityOf(interimRent));
+		action.moveToElement(interimRent).perform();
+		
+		WebDriverWait wt4= new WebDriverWait(driver, 60);
+	    wt4.until(ExpectedConditions.visibilityOf(incomeRecognition));
+		action.moveToElement(incomeRecognition).click().perform();
 	
+	}
 
 	
 	

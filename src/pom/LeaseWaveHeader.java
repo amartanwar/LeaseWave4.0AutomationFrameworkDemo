@@ -61,6 +61,13 @@ public  class LeaseWaveHeader extends BasePage
 		setup.click();
 	}
 	
+	public void clickOnFleetManagement()
+	{
+		WebDriverWait wt=new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(fleetManagment));
+		fleetManagment.click();
+	}
+	
 	
 
 }

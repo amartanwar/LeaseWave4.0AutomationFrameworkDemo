@@ -63,7 +63,7 @@ public abstract class BaseTest implements AutoConst
 			
 		}
 		//closing the browser
-//		driver.quit();
+		driver.quit();
 	}
 	
 
