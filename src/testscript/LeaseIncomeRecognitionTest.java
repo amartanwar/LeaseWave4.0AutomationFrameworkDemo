@@ -8,7 +8,7 @@ import pom.UpdatesMenuPage;
 import pom.jobListPage;
 import pom.leaseIncomeRecognitionPage;
 
-public class LeaseIncomeUpdateTest extends BaseTest
+public class LeaseIncomeRecognitionTest extends BaseTest
 {
 	@Test
 	public void LeaseIncomeUpdateSmokeTest() throws InterruptedException
@@ -27,7 +27,7 @@ public class LeaseIncomeUpdateTest extends BaseTest
 		le.selectleaseSequenceNumber();
 		
 		//Entering Lease Sequence Number
-		le.enterleaseSequenceNumber("auto-58");
+		le.enterleaseSequenceNumber("auto-64");
 		
 		//Entering update Through Date
 		le.enterupdateThroughDate("7/15/2018");

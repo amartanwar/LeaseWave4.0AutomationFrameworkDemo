@@ -48,6 +48,12 @@ public class ContractGeneralDetails extends BasePage
 	@FindBy(xpath=".//*[@id='ctl00xFxPHxContactPersonAssignmentUCxgrdContactTypes_rc_10_0']/nobr/input")
 	private WebElement contactTypeContract;
 	
+	@FindBy(xpath=".//*[@id='ctl00xFxPHxContactPersonAssignmentUCxgrdContactTypes_rc_11_0']/nobr/input")
+	private WebElement contactTypeDivision;
+	
+	@FindBy(xpath=".//*[@id='ctl00xFxPHxContactPersonAssignmentUCxgrdContactTypes_rc_15_0']/nobr/input")
+	private WebElement contactTypeSubDivision;
+	
 	@FindBy(id="ctl00_F_PH_ContactPersonAssignmentUC_ContactAddressUC1_cmdAddAddress_cmdButtonControl")
 	private WebElement addAddress;
 	
@@ -60,11 +66,14 @@ public class ContractGeneralDetails extends BasePage
 	@FindBy(id="ctl00_F_PH_ContactPersonAssignmentUC_ContactAddressUC1_txtCity")
 	private WebElement cty;
 	
+	@FindBy(id="ctl00_F_PH_ContactPersonAssignmentUC_ContactAddressUC1_cboStateLongName")
+	private WebElement stateId;
+	
 	@FindBy(id="igtxtctl00_F_PH_ContactPersonAssignmentUC_ContactAddressUC1_txtZIP")
 	private WebElement pinCode;
 	
 	@FindBy(id="ctl00_F_PH_ContactPersonAssignmentUC_cmdSaveContacts_cmdButtonControl")
-	private WebElement addressSaveButton;
+	private WebElement saveContactDetails;
 	
 	@FindBy(id="ctl00_Fr_PH_cmdSave_cmdButtonControl")
 	private WebElement saveButton;
@@ -84,12 +93,12 @@ public class ContractGeneralDetails extends BasePage
 	
 	public void enterContractName(String ContractName)
 	{
-		conNumber.sendKeys(ContractName);
+		conName.sendKeys(ContractName);
 	}
 	
 	public void enterInvoiceGroup(String invoiceGroup)
 	{
-		conNumber.sendKeys(invoiceGroup);
+		invGroup.sendKeys(invoiceGroup);
 	}
 	
 	public void selectProductChargeBillingType()
@@ -110,6 +119,12 @@ public class ContractGeneralDetails extends BasePage
 		sc.selectByIndex(1);
 	}
 	
+	public void selectContractStatus(int status)
+	{
+		Select sc=new Select(contractStatus);
+		sc.selectByIndex(status);
+	}
+	
 	public void clickOnAddContactDetails()
 	{
 		addContact.click();
@@ -127,7 +142,26 @@ public class ContractGeneralDetails extends BasePage
 		lastName.sendKeys(frstName);
 	}
 	
-	public void addAddressDetails()
+	public void selectContactTypeBilling()
+	{
+		contactTypeBilling.click();
+	}
+	
+	public void selectContactTypeDivision()
+	{
+		contactTypeDivision.click();
+	}
+	
+	public void selectContactTypeSubDivision()
+	{
+		contactTypeSubDivision.click();
+	}
+	
+	public void selectContactTypeContract()
+	{
+		contactTypeContract.click();
+	}
+	public void clickOnAddAddressDetails()
 	{
 		addAddress.click();
 	}
@@ -149,13 +183,27 @@ public class ContractGeneralDetails extends BasePage
 		cty.sendKeys(city);
 	}
 	
+	public void selectStateId()
+	{
+		Select sc=new Select(stateId);
+		sc.selectByIndex(1);
+	}
+	
 	public void enterZipCode(String zipCode)
 	{
+		pinCode.clear();
 		pinCode.sendKeys(zipCode);
+	}
+	
+	public void clickOnsaveContactDetails()
+	{
+		saveContactDetails.click();
 	}
 	
 	public void clickonSaveButton()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.elementToBeClickable(saveButton));
 		saveButton.click();
 	}
 }

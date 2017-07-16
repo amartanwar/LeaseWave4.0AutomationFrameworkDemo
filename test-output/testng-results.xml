@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
     <line>
       <![CDATA[Pass:Title is Matching]]>
@@ -7,17 +7,143 @@
     <line>
       <![CDATA[Pass:Title is Matching]]>
     </line>
+    <line>
+      <![CDATA[Pass:Title is Matching]]>
+    </line>
+    <line>
+      <![CDATA[Pass:Title is Matching]]>
+    </line>
+    <line>
+      <![CDATA[Pass:Title is Matching]]>
+    </line>
+    <line>
+      <![CDATA[Pass:Title is Matching]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40077" started-at="2017-07-15T18:57:04Z" finished-at="2017-07-15T18:57:44Z">
+  <suite name="Suite" duration-ms="351178" started-at="2017-07-16T11:33:16Z" finished-at="2017-07-16T11:39:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40077" started-at="2017-07-15T18:57:04Z" finished-at="2017-07-15T18:57:44Z">
-      <class name="testscript.AssetProfileTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="openApplication" is-config="true" duration-ms="12134" started-at="2017-07-16T00:27:04Z" finished-at="2017-07-16T00:27:16Z">
+    <test name="Test" duration-ms="351178" started-at="2017-07-16T11:33:16Z" finished-at="2017-07-16T11:39:07Z">
+      <class name="testscript.AssetCostAssignmentTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetCostAssignmentTest@1c7cbad]" name="openApplication" is-config="true" duration-ms="14903" started-at="2017-07-16T17:03:55Z" finished-at="2017-07-16T17:04:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="AssetCreationSmokeTest()[pri:0, instance:testscript.AssetProfileTest@1081592]" name="AssetCreationSmokeTest" duration-ms="27119" started-at="2017-07-16T00:27:16Z" finished-at="2017-07-16T00:27:43Z">
+        <test-method status="PASS" signature="AssetCostAssignmentSmokeTest()[pri:0, instance:testscript.AssetCostAssignmentTest@1c7cbad]" name="AssetCostAssignmentSmokeTest" duration-ms="27150" started-at="2017-07-16T17:04:10Z" finished-at="2017-07-16T17:04:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Pass:Title is Matching]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AssetCostAssignmentSmokeTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetCostAssignmentTest@1c7cbad]" name="closeApplication" is-config="true" duration-ms="890" started-at="2017-07-16T17:04:38Z" finished-at="2017-07-16T17:04:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AssetCostAssignmentSmokeTest status=SUCCESS method=AssetCostAssignmentTest.AssetCostAssignmentSmokeTest()[pri:0, instance:testscript.AssetCostAssignmentTest@1c7cbad] output=Pass:Title is Matching]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.AssetCostAssignmentTest -->
+      <class name="testscript.MovingLongTermtoShorTermUpdateTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.MovingLongTermtoShorTermUpdateTest@1933fd1]" name="openApplication" is-config="true" duration-ms="14295" started-at="2017-07-16T17:06:25Z" finished-at="2017-07-16T17:06:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="testLtrToArUpdate()[pri:0, instance:testscript.MovingLongTermtoShorTermUpdateTest@1933fd1]" name="testLtrToArUpdate" duration-ms="13594" started-at="2017-07-16T17:06:39Z" finished-at="2017-07-16T17:06:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLtrToArUpdate -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.MovingLongTermtoShorTermUpdateTest@1933fd1]" name="closeApplication" is-config="true" duration-ms="734" started-at="2017-07-16T17:06:53Z" finished-at="2017-07-16T17:06:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLtrToArUpdate status=SUCCESS method=MovingLongTermtoShorTermUpdateTest.testLtrToArUpdate()[pri:0, instance:testscript.MovingLongTermtoShorTermUpdateTest@1933fd1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.MovingLongTermtoShorTermUpdateTest -->
+      <class name="testscript.ContractSetupTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.ContractSetupTest@16905e]" name="openApplication" is-config="true" duration-ms="13904" started-at="2017-07-16T17:07:50Z" finished-at="2017-07-16T17:08:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="contractprofileSmokeTesting()[pri:0, instance:testscript.ContractSetupTest@16905e]" name="contractprofileSmokeTesting" duration-ms="61730" started-at="2017-07-16T17:08:04Z" finished-at="2017-07-16T17:09:06Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Pass:Title is Matching]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- contractprofileSmokeTesting -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.ContractSetupTest@16905e]" name="closeApplication" is-config="true" duration-ms="828" started-at="2017-07-16T17:09:06Z" finished-at="2017-07-16T17:09:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=contractprofileSmokeTesting status=SUCCESS method=ContractSetupTest.contractprofileSmokeTesting()[pri:0, instance:testscript.ContractSetupTest@16905e] output=Pass:Title is Matching]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.ContractSetupTest -->
+      <class name="testscript.LeaseProfileTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.LeaseProfileTest@12cc05a]" name="openApplication" is-config="true" duration-ms="14216" started-at="2017-07-16T17:04:38Z" finished-at="2017-07-16T17:04:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="LeaseProfileCreationSmokeTest()[pri:0, instance:testscript.LeaseProfileTest@12cc05a]" name="LeaseProfileCreationSmokeTest" duration-ms="91134" started-at="2017-07-16T17:04:53Z" finished-at="2017-07-16T17:06:24Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Pass:Title is Matching]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LeaseProfileCreationSmokeTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.LeaseProfileTest@12cc05a]" name="closeApplication" is-config="true" duration-ms="850" started-at="2017-07-16T17:06:24Z" finished-at="2017-07-16T17:06:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LeaseProfileCreationSmokeTest status=SUCCESS method=LeaseProfileTest.LeaseProfileCreationSmokeTest()[pri:0, instance:testscript.LeaseProfileTest@12cc05a] output=Pass:Title is Matching]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.LeaseProfileTest -->
+      <class name="testscript.LeaseIncomeRecognitionTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.LeaseIncomeRecognitionTest@8a9f61]" name="openApplication" is-config="true" duration-ms="14715" started-at="2017-07-16T17:06:53Z" finished-at="2017-07-16T17:07:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="LeaseIncomeUpdateSmokeTest()[pri:0, instance:testscript.LeaseIncomeRecognitionTest@8a9f61]" name="LeaseIncomeUpdateSmokeTest" duration-ms="14655" started-at="2017-07-16T17:07:08Z" finished-at="2017-07-16T17:07:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LeaseIncomeUpdateSmokeTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.LeaseIncomeRecognitionTest@8a9f61]" name="closeApplication" is-config="true" duration-ms="890" started-at="2017-07-16T17:07:23Z" finished-at="2017-07-16T17:07:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LeaseIncomeUpdateSmokeTest status=SUCCESS method=LeaseIncomeRecognitionTest.LeaseIncomeUpdateSmokeTest()[pri:0, instance:testscript.LeaseIncomeRecognitionTest@8a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.LeaseIncomeRecognitionTest -->
+      <class name="testscript.AssetProfileTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetProfileTest@19f379]" name="openApplication" is-config="true" duration-ms="14996" started-at="2017-07-16T17:03:16Z" finished-at="2017-07-16T17:03:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="AssetCreationSmokeTest()[pri:0, instance:testscript.AssetProfileTest@19f379]" name="AssetCreationSmokeTest" duration-ms="23808" started-at="2017-07-16T17:03:31Z" finished-at="2017-07-16T17:03:54Z">
           <reporter-output>
             <line>
               <![CDATA[Pass:Title is Matching]]>
@@ -27,11 +153,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- AssetCreationSmokeTest -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetProfileTest@1081592]" name="closeApplication" is-config="true" duration-ms="808" started-at="2017-07-16T00:27:43Z" finished-at="2017-07-16T00:27:44Z">
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetProfileTest@19f379]" name="closeApplication" is-config="true" duration-ms="999" started-at="2017-07-16T17:03:54Z" finished-at="2017-07-16T17:03:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AssetCreationSmokeTest status=SUCCESS method=AssetProfileTest.AssetCreationSmokeTest()[pri:0, instance:testscript.AssetProfileTest@1081592] output=Pass:Title is Matching]]]>
+                <![CDATA[[TestResult name=AssetCreationSmokeTest status=SUCCESS method=AssetProfileTest.AssetCreationSmokeTest()[pri:0, instance:testscript.AssetProfileTest@19f379] output=Pass:Title is Matching]]]>
               </value>
             </param>
           </params>
@@ -39,6 +165,30 @@
           </reporter-output>
         </test-method> <!-- closeApplication -->
       </class> <!-- testscript.AssetProfileTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testscript.ProductProfileTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.ProductProfileTest@153acfe]" name="openApplication" is-config="true" duration-ms="14341" started-at="2017-07-16T17:07:24Z" finished-at="2017-07-16T17:07:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="ProductProfileSmokeTest()[pri:0, instance:testscript.ProductProfileTest@153acfe]" name="ProductProfileSmokeTest" duration-ms="11765" started-at="2017-07-16T17:07:38Z" finished-at="2017-07-16T17:07:50Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Pass:Title is Matching]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ProductProfileSmokeTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.ProductProfileTest@153acfe]" name="closeApplication" is-config="true" duration-ms="765" started-at="2017-07-16T17:07:50Z" finished-at="2017-07-16T17:07:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ProductProfileSmokeTest status=SUCCESS method=ProductProfileTest.ProductProfileSmokeTest()[pri:0, instance:testscript.ProductProfileTest@153acfe] output=Pass:Title is Matching]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.ProductProfileTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

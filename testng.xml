@@ -1,10 +1,13 @@
 <suite name="Suite">
   <test name="Test">
-    <classes>
+    <classes> 
       <class name="testscript.AssetProfileTest"/>
-      <class name="testscript.AssetCostAssignmentTest"/>   
+      <class name="testscript.AssetCostAssignmentTest"/>
       <class name="testscript.LeaseProfileTest"/>
-      <class name="testscript.LtrToArUpdatetest"/>
+      <class name="testscript.MovingLongTermtoShorTermUpdateTest"/>
+      <class name="testscript.LeaseIncomeRecognitionTest"/>
+      <class name="testscript.ProductProfileTest"/>
+      <class name="testscript.ContractSetupTest"/>
     </classes>
   </test> 
 </suite> 

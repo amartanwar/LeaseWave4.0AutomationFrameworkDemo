@@ -40,6 +40,8 @@ public class CustomerListPage extends BasePage
 	
 	public void clickOnSelectButton()
 	{
+		WebDriverWait wt=new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.elementToBeClickable(selectButton));
 		selectButton.click();
 	}
 }

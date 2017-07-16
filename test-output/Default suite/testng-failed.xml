@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testscript.ProductProfileTest">
+      <class name="testscript.ContractProfileTest">
         <methods>
+          <include name="contractprofileSmokeTesting"/>
           <include name="closeApplication"/>
           <include name="openApplication"/>
-          <include name="ProductProfileSmokeTest"/>
         </methods>
-      </class> <!-- testscript.ProductProfileTest -->
+      </class> <!-- testscript.ContractProfileTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

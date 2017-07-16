@@ -27,7 +27,7 @@ public class MovingLongTermtoShorTermUpdateTest extends BaseTest
 		ltr.selectleaseSequenceNumber();
 		
 		//Entering Lease Sequence Number
-		ltr.enterleaseSequenceNumber("auto-60");
+		ltr.enterleaseSequenceNumber("auto-64");
 		
 		//Entering update Through Date
 		ltr.enterupdateThroughDate("7/15/2018");
