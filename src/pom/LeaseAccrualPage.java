@@ -28,7 +28,6 @@ public class LeaseAccrualPage extends BasePage
 	{
 		WebDriverWait wt=new WebDriverWait(driver, 100);
 		wt.until(ExpectedConditions.visibilityOf(computeYieldButton));
-		System.out.println(driver.getTitle());
 		computeYieldButton.click();
 	}
 	
@@ -44,7 +43,6 @@ public class LeaseAccrualPage extends BasePage
 		WebDriverWait wt=new WebDriverWait(driver, 100);
 		wt.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
-		System.out.println(alert.getText());
 		alert.accept();
 	}
 

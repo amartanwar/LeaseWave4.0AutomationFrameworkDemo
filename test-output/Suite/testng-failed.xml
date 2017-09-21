@@ -3,13 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="testscript.LeaseProfileTest">
+      <class name="testscript.AssetBulkCostAssignmentTest">
         <methods>
-          <include name="LeaseProfileCreationTest"/>
+          <include name="AssetBulkCostAssignment1"/>
           <include name="closeApplication"/>
           <include name="openApplication"/>
         </methods>
-      </class> <!-- testscript.LeaseProfileTest -->
+      </class> <!-- testscript.AssetBulkCostAssignmentTest -->
+      <class name="testscript.LeaseBulkCreationTest">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="LeaseBulkCreationTest1"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- testscript.LeaseBulkCreationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

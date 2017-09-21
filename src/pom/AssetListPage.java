@@ -52,7 +52,8 @@ public  class AssetListPage extends BasePage
 	public void searchByUnitNumber(String unitNumber) throws InterruptedException
 	{
 		WebDriverWait wt1=new WebDriverWait(driver, 60);
-		wt1.until(ExpectedConditions.elementToBeClickable(unitnumber));
+		wt1.until(ExpectedConditions.visibilityOf(unitnumber));
+		unitnumber.clear();
 		unitnumber.sendKeys(unitNumber);
 	}
 	
@@ -80,11 +81,12 @@ public  class AssetListPage extends BasePage
 		
 	}
 	
-	public void clickOnSelectExportButton()
+	public void clickOnSelectExportButton() 
 	{
 		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(selectExportButton));
 		selectExportButton.click();
+		
 	}
 	
 	

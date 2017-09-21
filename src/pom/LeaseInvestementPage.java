@@ -24,7 +24,6 @@ public class LeaseInvestementPage extends BasePage
 	{
 		WebDriverWait wt =new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.elementToBeClickable(saveButton));
-		System.out.println(driver.getTitle());
 		saveButton.click();
 	}
 

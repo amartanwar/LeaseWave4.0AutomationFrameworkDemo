@@ -8,9 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
+import generic.SwitchControlToNextWindow;
 import generic.SystemDate;
 
-public class LeaseInventoryInLeasePage extends BasePage
+public class LeaseInventoryInLeasePage extends BasePage  
 {
 	@FindBy(id="ctl00_F_PH_cmdImportAdd_cmdImportButton")
 	private WebElement addButton;
@@ -43,12 +44,20 @@ public class LeaseInventoryInLeasePage extends BasePage
 	
 	public void clickOnAddButon() throws InterruptedException
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 300);
+		wt.until(ExpectedConditions.visibilityOf(addButton));
 		addButton.click();
-		Thread.sleep(2000);
+//		
+		SwitchControlToNextWindow sc= new SwitchControlToNextWindow();
+//		sc.switchControlToNextWindow1(driver, "Asset List");
+		sc.waitForNumberOfWindowsToEqual(driver, 2);
+		Thread.sleep(3000);
 		for(String winHandle: driver.getWindowHandles())
 		{
 			driver.switchTo().window(winHandle);
 		}
+		
+		
 	}
 	
 	public void clickOnEditButton()
@@ -74,6 +83,8 @@ public class LeaseInventoryInLeasePage extends BasePage
 	
 	public void enterDeliverydate(String date)
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.elementToBeClickable(deliveryDate));
 		deliveryDate.sendKeys(date);
 	}
 	

@@ -24,7 +24,7 @@ public abstract class BasePage implements AutoConst {
 		try
 		{
 			wait.until(ExpectedConditions.titleIs(eTitle));
-			Reporter.log("Pass:Title is Matching",true);
+//			Reporter.log("Pass:Title is Matching",true);
 		}
 		catch(Exception e)
 		{

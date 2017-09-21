@@ -46,17 +46,28 @@ public class AssetMenuPage extends BasePage
 		assetLink.click();
 	}
 	
-	public void clickOnAssetProfile()
+	public void clickOnAssetProfile() throws InterruptedException
 	{
 		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(assetProfile));
 		assetProfile.click();
+		
 	}
 	public void clickOnvalueAndStatusChanges()
 	{
 		valueAndStatusChange.click();
 	}
 	
+//	public void openAssetProfileListpage() throws InterruptedException 
+//	{
+//		WebDriverWait wt= new WebDriverWait(driver, 60);
+//		wt.until(ExpectedConditions.visibilityOf(assetLink));
+//		assetLink.click();
+//		Actions ac= new Actions(driver);
+//		Thread.sleep(2000);
+//		ac.moveToElement(assetProfile).perform();
+//		ac.click().perform();
+//	}
 	public void openAssetCostAssignmentPage() throws InterruptedException
 	{
 		    WebDriverWait wt= new WebDriverWait(driver, 60);
@@ -70,7 +81,7 @@ public class AssetMenuPage extends BasePage
 			
 			WebDriverWait wt2= new WebDriverWait(driver, 60);
 		    wt2.until(ExpectedConditions.visibilityOf(Zero));
-			action.moveToElement(Zero);
+			action.moveToElement(Zero).perform();
 			
 			WebDriverWait wt3= new WebDriverWait(driver, 60);
 		    wt3.until(ExpectedConditions.visibilityOf(nonZero));

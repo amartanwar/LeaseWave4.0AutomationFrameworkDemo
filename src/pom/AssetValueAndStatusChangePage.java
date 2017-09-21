@@ -44,17 +44,28 @@ public class AssetValueAndStatusChangePage extends BasePage
 	
 	public void selectGridCheckBox()
 	{
+		WebDriverWait wt= new WebDriverWait(driver,60);
+		wt.until(ExpectedConditions.visibilityOf(gridCheckBox));
 		gridCheckBox.click();
 	}
 	
 	public void selectAssignmentOperator()
 	{
-		Select se=new Select(assignmentDropDown);
-		se.selectByIndex(1);
+		if(gridCheckBox.isSelected()==true)
+		{
+			Select se=new Select(assignmentDropDown);
+			se.selectByIndex(1);
+		}
+		else
+		{
+			gridCheckBox.click();
+			Select se=new Select(assignmentDropDown);
+			se.selectByIndex(1);
+		}
 	}
 	public void enterCostOfAsset(String cost)
 	{
-		WebDriverWait wt= new WebDriverWait(driver, 5);
+		WebDriverWait wt= new WebDriverWait(driver,60);
 		wt.until(ExpectedConditions.visibilityOf(costAssignmentTextbox));
 		costAssignmentTextbox.sendKeys(cost);
 	}
@@ -82,7 +93,7 @@ public class AssetValueAndStatusChangePage extends BasePage
 	
 	public void handlePopup()
 	{
-		WebDriverWait wt=new WebDriverWait(driver, 10);
+		WebDriverWait wt=new WebDriverWait(driver,60);
 		wt.until(ExpectedConditions.alertIsPresent());
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
@@ -92,7 +103,7 @@ public class AssetValueAndStatusChangePage extends BasePage
 	{
 		try
 		{
-			WebDriverWait wt=new WebDriverWait(driver, 10);
+			WebDriverWait wt=new WebDriverWait(driver,10);
 			wt.until(ExpectedConditions.titleIs("Asset Value and Status Change - En Masse"));
 			closeButton.click();
 		}

@@ -9,7 +9,6 @@ import generic.excel;
 import pom.AssetListPage;
 import pom.AssetMenuPage;
 import pom.AssetProfilePage;
-import pom.LeaseWaveHeader;
 
 
 public class AssetProfileTest extends BaseTest 
@@ -31,8 +30,8 @@ public class AssetProfileTest extends BaseTest
 		String department=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,10);
 
 		//Opening Asset Profile screen
-		LeaseWaveHeader lwh= new LeaseWaveHeader(driver);
-		lwh.clickOnPortFolioManagement();
+//		LeaseWaveHeader lwh= new LeaseWaveHeader(driver);
+//		lwh.clickOnPortFolioManagement();
 		AssetMenuPage asm= new AssetMenuPage(driver);
 		asm.clickOnAssetMenu();
 		asm.clickOnAssetProfile();

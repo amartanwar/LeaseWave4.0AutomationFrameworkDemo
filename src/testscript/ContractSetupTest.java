@@ -38,10 +38,10 @@ public class ContractSetupTest extends BaseTest
 		
 		//Entering Contract Number
 		ContractGeneralDetails cg=new ContractGeneralDetails(driver);
-		cg.enterContractNumber("autoCont-14");
+		cg.enterContractNumber("autoCont-15");
 		
 		//Entering COntract Name
-		cg.enterContractName("autocon-14");
+		cg.enterContractName("autocon-15");
 		
 		//Entering Invoice group
 		cg.enterInvoiceGroup("As");

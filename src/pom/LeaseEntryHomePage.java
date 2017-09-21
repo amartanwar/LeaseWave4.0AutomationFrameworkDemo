@@ -42,7 +42,6 @@ public class LeaseEntryHomePage extends BasePage
 	{
 		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.titleContains("Lease Entry Home"));
-		System.out.println(driver.getTitle());
 		investmentScreen.click();
 	}
 	

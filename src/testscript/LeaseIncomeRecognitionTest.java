@@ -3,7 +3,6 @@ package testscript;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
-import pom.LeaseWaveHeader;
 import pom.UpdatesMenuPage;
 import pom.jobListPage;
 import pom.leaseIncomeRecognitionPage;
@@ -14,8 +13,8 @@ public class LeaseIncomeRecognitionTest extends BaseTest
 	public void LeaseIncomeUpdateSmokeTest() throws InterruptedException
 	{
 		//opening Lease Income recoginition screen
-		LeaseWaveHeader lw =new LeaseWaveHeader(driver);
-		lw.clickOnPortFolioManagement();
+//		LeaseWaveHeader lw =new LeaseWaveHeader(driver);
+//		lw.clickOnPortFolioManagement();
 		UpdatesMenuPage um=new UpdatesMenuPage(driver);
 		um.openLeaseIncomeRecognition();
 		
@@ -27,7 +26,7 @@ public class LeaseIncomeRecognitionTest extends BaseTest
 		le.selectleaseSequenceNumber();
 		
 		//Entering Lease Sequence Number
-		le.enterleaseSequenceNumber("auto-64");
+		le.enterleaseSequenceNumber("auto-85");
 		
 		//Entering update Through Date
 		le.enterupdateThroughDate("7/15/2018");

@@ -12,6 +12,8 @@ import generic.BasePage;
 
 public class ProductProfilePage extends BasePage
 {
+	
+
 	@FindBy(id="ctl00_F_PH_txtProductCode")
 	private WebElement prdCode;
 	
@@ -38,6 +40,7 @@ public class ProductProfilePage extends BasePage
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
+	
 	
 	public void enterProductCode(String productCode)
 	{

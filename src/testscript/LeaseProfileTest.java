@@ -20,7 +20,6 @@ import pom.LeaseMenuPage;
 import pom.LeasePaymentSchedulePage;
 import pom.LeaseProfilePage;
 import pom.LeaseStructurePage;
-import pom.LeaseWaveHeader;
 
 public class LeaseProfileTest extends BaseTest
 {
@@ -31,8 +30,8 @@ public class LeaseProfileTest extends BaseTest
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		
 		//Opening the lease lease creation page
-		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);
-		lwh.clickOnPortFolioManagement();
+//		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);
+//		lwh.clickOnPortFolioManagement();
 		LeaseMenuPage lm=new LeaseMenuPage(driver);
 		lm.clickOnLeaseMenu();
 		lm.clickOnNewLease();

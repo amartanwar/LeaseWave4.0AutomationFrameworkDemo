@@ -3,7 +3,6 @@ package testscript;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
-import pom.LeaseWaveHeader;
 import pom.MovingLongTermtoShorTermUpdatePage;
 import pom.UpdatesMenuPage;
 import pom.jobListPage;
@@ -14,8 +13,8 @@ public class MovingLongTermtoShorTermUpdateTest extends BaseTest
 	public void testLtrToArUpdate() throws InterruptedException
 	{
 		//opening MovingLongTermtoShorTermUpdatePage
-		LeaseWaveHeader lw= new LeaseWaveHeader(driver);
-		lw.clickOnPortFolioManagement();
+//		LeaseWaveHeader lw= new LeaseWaveHeader(driver);
+//		lw.clickOnPortFolioManagement();
 		UpdatesMenuPage up=new UpdatesMenuPage(driver);
 		up.openMovingLongTermToShortTerm();
 		
@@ -27,7 +26,7 @@ public class MovingLongTermtoShorTermUpdateTest extends BaseTest
 		ltr.selectleaseSequenceNumber();
 		
 		//Entering Lease Sequence Number
-		ltr.enterleaseSequenceNumber("auto-64");
+		ltr.enterleaseSequenceNumber("auto-85");
 		
 		//Entering update Through Date
 		ltr.enterupdateThroughDate("7/15/2018");
