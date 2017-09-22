@@ -24,7 +24,7 @@ public class AssetBulkCreationTest extends BaseTest
 			asm.clickOnAssetProfile();
 			AssetListPage  aslp= new AssetListPage(driver);
 			
-			for(int j=1;j<=50;j++)
+			for(int j=1;j<=5;j++)
 				{
 					//Fetching data from xl
 					String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", j,0);
@@ -85,7 +85,7 @@ public class AssetBulkCreationTest extends BaseTest
 					app.clickOnSave();
 					
 					//Validating vehicle details page
-					app.verfyTittle("Vehicle Details","Asset Creation failed because of incorrect values entered");
+					app.verfyTittle("Vehicle Details","Vehicle Details page is not visible");
 					
 					//clicking on saveButton(Vehicle details)
 					app.clickOnVehicleDetailsSaveButton();
@@ -95,7 +95,7 @@ public class AssetBulkCreationTest extends BaseTest
 					
 					
 					//Validating Asset creation test
-					app.verfyTittle("Asset List","Asset Creation failed because of incorrect values entered");
+					app.verfyTittle("Asset List","Asset List page is not visible");
 					Reporter.log(un+" Created successfully");
 				
 				}

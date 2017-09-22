@@ -23,13 +23,14 @@ public class AssetBulkCostAssignmentTest extends BaseTest
 		AssetValueAndStatusChangePage asvl= new  AssetValueAndStatusChangePage(driver);
 		asvl.clickOnCloseButton();
 		
-		for(int i=1;i<=50;i++)
+		for(int i=1;i<=5;i++)
 		{
 			String unitNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", i,0);
 			String cost=excel.getNumericCellValue("./TestData/Input.xlsx", "AssetProfile", i,11);
 			AssetListPage asl=new AssetListPage(driver);
 			asl.searchByUnitNumber(unitNumber);
 			asl.clickOnSearchButton();
+			Thread.sleep(1000);
 			asl.selectCheckBox();
 			asl.clickONSelectButton();
 			asvl.selectGridCheckBox();

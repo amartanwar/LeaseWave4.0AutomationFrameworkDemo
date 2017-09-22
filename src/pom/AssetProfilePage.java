@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
 import generic.SystemDate;
@@ -154,22 +156,30 @@ public class AssetProfilePage extends BasePage
 	
 	public void clickOnSave()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(saveButton));
 		saveButton.click();
 	}
 	
 	public void clickOnClose()
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(closeButton));
 		closeButton.click();
 		
 	}
 	
 	public void clickOnVehicleDetailsSaveButton() 
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(assetVehicleDetailsSaveButton));
 		assetVehicleDetailsSaveButton.click();
 	}
 	
 	public void clickOnAssetProfileGlobalClose() 
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.visibilityOf(assetProfileGlobalClose));
 		assetProfileGlobalClose.click();
 		
 	}

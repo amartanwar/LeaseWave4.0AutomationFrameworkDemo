@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
+      <class name="testscript.AssetBulkCostAssignmentTest">
+        <methods>
+          <include name="AssetBulkCostAssignment1"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- testscript.AssetBulkCostAssignmentTest -->
       <class name="testscript.LeaseBulkCreationTest">
         <methods>
           <include name="closeApplication"/>
@@ -11,5 +18,5 @@
         </methods>
       </class> <!-- testscript.LeaseBulkCreationTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -59,4 +59,17 @@ public class SwitchControlToNextWindow
 
 	}
 	
+	public void waitForWndows(WebDriver driver,String currentWindow)
+	{
+		 String newWindow = new WebDriverWait(driver, 60).until(new ExpectedCondition<String>(){
+		   @Override
+		   public String apply(WebDriver d) {
+		     Set<String> handles = d.getWindowHandles();
+		     handles.remove(currentWindow);
+		     return handles.size() > 0 ? handles.iterator().next() : null;
+		   }});
+		 
+		 driver.switchTo().window(newWindow);
+	}
+	
 }

@@ -39,4 +39,17 @@ public class ScrollOptions
 	
 	}
 
+	public static void  scrollingEndofAPage2(int Count) throws AWTException
+	{
+		Robot rb= new Robot();
+		rb.keyPress(KeyEvent.VK_TAB);
+		rb.keyRelease(KeyEvent.VK_TAB);
+		for(int i=1;i<=Count;i++)
+		{
+			rb.keyPress(KeyEvent.VK_DOWN);
+		}
+		rb.keyRelease(KeyEvent.VK_DOWN);
+	
+	
+	}
 }

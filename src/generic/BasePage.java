@@ -1,8 +1,6 @@
 package generic;
 
 import java.io.IOException;
-
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,7 +17,7 @@ public abstract class BasePage implements AutoConst {
 	
 	public void verfyTittle(String eTitle,String msg) throws IOException, InterruptedException
 	{
-		WebDriverWait wait= new WebDriverWait(driver,10);
+		WebDriverWait wait= new WebDriverWait(driver,60);
 		
 		try
 		{
@@ -29,7 +27,7 @@ public abstract class BasePage implements AutoConst {
 		catch(Exception e)
 		{
 			Reporter.log(msg,true);
-			Assert.fail();
+			org.testng.Assert.fail();
 		}
 	}
 }

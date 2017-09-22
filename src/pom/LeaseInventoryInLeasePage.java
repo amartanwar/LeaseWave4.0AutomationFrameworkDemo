@@ -47,17 +47,31 @@ public class LeaseInventoryInLeasePage extends BasePage
 		WebDriverWait wt= new WebDriverWait(driver, 300);
 		wt.until(ExpectedConditions.visibilityOf(addButton));
 		addButton.click();
-//		
+		
 		SwitchControlToNextWindow sc= new SwitchControlToNextWindow();
 //		sc.switchControlToNextWindow1(driver, "Asset List");
 		sc.waitForNumberOfWindowsToEqual(driver, 2);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		for(String winHandle: driver.getWindowHandles())
 		{
+		
 			driver.switchTo().window(winHandle);
 		}
 		
 		
+	}
+	
+	
+	
+	public void clickOnAddButton2()
+	{
+		WebDriverWait wt= new WebDriverWait(driver, 300);
+		wt.until(ExpectedConditions.visibilityOf(addButton));
+		String currentWindow = driver.getWindowHandle();
+		
+		addButton.click();
+		SwitchControlToNextWindow sc= new SwitchControlToNextWindow();
+		sc.waitForWndows(driver, currentWindow);
 	}
 	
 	public void clickOnEditButton()

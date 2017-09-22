@@ -27,7 +27,7 @@ public class LeaseBulkCreationTest extends BaseTest
 	@Test
 	public void LeaseBulkCreationTest1() throws InterruptedException, AWTException, IOException
 	{
-		for(int i=1;i<=50;i++)
+		for(int i=1;i<=5;i++)
 		{
 			//Fetching values from xl
 			String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", i,0);
@@ -53,17 +53,21 @@ public class LeaseBulkCreationTest extends BaseTest
 			//LeaseInventoryInlease screen
 			LeaseInventoryInLeasePage ilp=new LeaseInventoryInLeasePage(driver);
 			String beforeWindow = driver.getWindowHandle();
-			ilp.clickOnAddButon();
+			System.out.println("1"+ driver.getTitle());
+			ilp.clickOnAddButton2();
+			
+		
 			//AssetList page
 			AssetListPage asl=new AssetListPage(driver);
+			System.out.println("2 "+driver.getTitle());
 			asl.searchByUnitNumber(un);
+			System.out.println("3 "+driver.getTitle());
 			asl.clickOnSearchButton();
 			asl.selectCheckBox();
-			Thread.sleep(2000);
 			asl.clickOnSelectExportButton();
+			Thread.sleep(1000);
 			driver.switchTo().window(beforeWindow);
 			//LeaseInventoryInlease screen
-			Thread.sleep(2000);
 			ilp.selectAsset();
 			ilp.selectPrimaryAsset();
 			ilp.clickOnEditButton();

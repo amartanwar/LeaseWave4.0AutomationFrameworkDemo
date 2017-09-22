@@ -15,7 +15,7 @@ public class  SqlServerConnector {
                 }
 
 //				//Query to Execute		
-				String query = "select top 1 *  from customer_profile;";	
+				String query = "select top 2 *  from customer_profile;";	
               
 
       		//Create Statement Object		

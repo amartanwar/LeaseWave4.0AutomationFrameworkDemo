@@ -84,7 +84,7 @@ public  class AssetListPage extends BasePage
 	public void clickOnSelectExportButton() 
 	{
 		WebDriverWait wt=new WebDriverWait(driver, 60);
-		wt.until(ExpectedConditions.visibilityOf(selectExportButton));
+		wt.until(ExpectedConditions.elementToBeSelected(chkBox));
 		selectExportButton.click();
 		
 	}

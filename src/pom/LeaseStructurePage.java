@@ -128,8 +128,9 @@ public class LeaseStructurePage extends BasePage
 		glPostDate.sendKeys(SystemDate.currentDate());
 	}
 	
-	public void clickOnSaveButton()
+	public void clickOnSaveButton() throws InterruptedException
 	{
+		Thread.sleep(1000);
 		saveButton.click();
 	}
 
