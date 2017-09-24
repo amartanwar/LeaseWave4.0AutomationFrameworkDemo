@@ -29,7 +29,7 @@ public class AssetBulkCostAssignmentTest extends BaseTest
 			String cost=excel.getNumericCellValue("./TestData/Input.xlsx", "AssetProfile", i,11);
 			AssetListPage asl=new AssetListPage(driver);
 			asl.searchByUnitNumber(unitNumber);
-			asl.clickOnSearchButton();
+			asl.clickOnSearchButton(unitNumber);
 			Thread.sleep(1000);
 			asl.selectCheckBox();
 			asl.clickONSelectButton();

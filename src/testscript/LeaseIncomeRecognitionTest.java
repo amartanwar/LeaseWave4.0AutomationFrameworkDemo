@@ -3,6 +3,7 @@ package testscript;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
+import generic.excel;
 import pom.UpdatesMenuPage;
 import pom.jobListPage;
 import pom.leaseIncomeRecognitionPage;
@@ -12,6 +13,7 @@ public class LeaseIncomeRecognitionTest extends BaseTest
 	@Test
 	public void LeaseIncomeUpdateSmokeTest() throws InterruptedException
 	{
+		String leaseSequenceNumber = excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		//opening Lease Income recoginition screen
 //		LeaseWaveHeader lw =new LeaseWaveHeader(driver);
 //		lw.clickOnPortFolioManagement();
@@ -26,7 +28,7 @@ public class LeaseIncomeRecognitionTest extends BaseTest
 		le.selectleaseSequenceNumber();
 		
 		//Entering Lease Sequence Number
-		le.enterleaseSequenceNumber("auto-85");
+		le.enterleaseSequenceNumber(leaseSequenceNumber);
 		
 		//Entering update Through Date
 		le.enterupdateThroughDate("7/15/2018");

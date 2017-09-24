@@ -112,7 +112,7 @@ public class AssetProfilePage extends BasePage
 	public void setContractNumber(String conNumber)
 	{
 		Select se= new Select(contractNumber);
-		se.selectByIndex(6);
+		se.selectByIndex(1);
 	}
 	
 	public void setDivision(String divNumber)

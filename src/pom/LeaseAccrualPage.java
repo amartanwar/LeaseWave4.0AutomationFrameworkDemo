@@ -46,7 +46,7 @@ public class LeaseAccrualPage extends BasePage
 	
 	public void verifyYeild(String expectedyeildWithoutIDC,String expectedyeildWithIDC) throws AWTException
 	{
-		ScrollOptions.scrollingEndofAPage2(10);
+		ScrollOptions.scrollingEndofAPage2(15);
 //		org.testng.Assert.assertEquals(customerYeild.getAttribute("uv"), "198.344143","Customer Yeild is not matching");
 		
 		org.testng.Assert.assertEquals(yeildWithoutIDC.getAttribute("uv"), expectedyeildWithoutIDC,"yeildWithoutIDC is not matching");

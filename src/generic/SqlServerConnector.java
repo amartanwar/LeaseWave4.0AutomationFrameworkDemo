@@ -6,7 +6,9 @@ import  java.sql.SQLException;
 import java.sql.Statement;	
 
 public class  SqlServerConnector {				
-    	public static void  main(String[] args) throws  ClassNotFoundException, SQLException {													
+    	public static void  main(String[] args) throws   SQLException, ClassNotFoundException
+    	{			
+    		
 				//Connection URL Syntax: "jdbc:mysql://ipaddress:portnumber/db_name"		
                 String dbUrl ="jdbc:sqlserver://otbsqlserver;database=MAG_TotalViewQA;user=development;password=jk";
             	Connection con = DriverManager.getConnection(dbUrl);
@@ -15,7 +17,7 @@ public class  SqlServerConnector {
                 }
 
 //				//Query to Execute		
-				String query = "select top 2 *  from customer_profile;";	
+				String query = "select top 1 *  from customer_profile;";	
               
 
       		//Create Statement Object		

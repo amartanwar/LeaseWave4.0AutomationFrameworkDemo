@@ -54,7 +54,7 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				//AssetList page
 				AssetListPage asl=new AssetListPage(driver);
 				asl.searchByUnitNumber(un);
-				asl.clickOnSearchButton();
+				asl.clickOnSearchButton(un);
 				asl.selectCheckBox();
 				Thread.sleep(2000);
 				asl.clickOnSelectExportButton();
@@ -77,8 +77,8 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				lp.selectGLDepartment();
 				lp.selectInterimRentGLTemplate();
 				lp.selectreceiptCashGLTemplate();
-				lp.selectProductChargeBillingType();
-				lp.selectLeaseRentalBillingType();
+				lp.selectProductChargeBillingType("Arrears");
+				lp.selectLeaseRentalBillingType("Arrears");
 				lp.clickOnSaveButton();
 			
 				
@@ -120,7 +120,7 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				LeaseAccrualPage la=new LeaseAccrualPage(driver);
 				la.clickOnComputeYieldButton();
 				//Verifying the Yeild
-				la.verifyYeild("1417.200486", "1417.200486");
+				la.verifyYeild("1416.200486", "1417.200486");
 				la.clickOnSaveButton();
 				la.handlePopup();
 				

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import generic.BasePage;
@@ -20,6 +21,12 @@ public class LeaseStructurePage extends BasePage
 
 	@FindBy(id="ctl00_F_PH_txtInceptionDate_input")
 	private WebElement commencementDate;
+	
+	@FindBy(id="ctl00_F_PH_cboRentalFrequency_cboComboBoxControl")
+	private WebElement leaseFrequency;
+	
+	@FindBy(id="ctl00_F_PH_cboPaymentStructure_cboComboBoxControl")
+	private WebElement paymentStructure;
 
 	@FindBy(id="igtxtctl00_F_PH_txtInceptionRentalExecutoryFeesAmount_txtWebCurrencyEdit")
 	private WebElement commencementRentalExecutoryFee;
@@ -132,6 +139,19 @@ public class LeaseStructurePage extends BasePage
 	{
 		Thread.sleep(1000);
 		saveButton.click();
+	}
+	
+	public void selectPaymentStructure(String paymentStructureType)
+	{
+		Select se= new Select(paymentStructure);
+		se.selectByVisibleText(paymentStructureType);
+	}
+	
+	public void selectLeaseFrequency(String leaseFrequencyType)
+	{
+		Select se= new Select(leaseFrequency);
+		se.selectByVisibleText(leaseFrequencyType);
+//		se.selectByIndex(2);
 	}
 
 	

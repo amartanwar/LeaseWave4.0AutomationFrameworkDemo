@@ -97,20 +97,20 @@ public class LeaseProfilePage extends BasePage
 		se.selectByIndex(1);
 	}
 	
-	public void selectProductChargeBillingType()
+	public void selectProductChargeBillingType(String ProductChargeBillingTypeID )
 	{
 		WebDriverWait et= new WebDriverWait(driver, 60);
 		et.until(ExpectedConditions.visibilityOf(productChargeBillingType));
 		Select se= new Select(productChargeBillingType);
-		se.selectByIndex(1);
+		se.selectByVisibleText(ProductChargeBillingTypeID);
 	}
 	
-	public void selectLeaseRentalBillingType()
+	public void selectLeaseRentalBillingType(String LeaseRentalBillingTypeID)
 	{
 		WebDriverWait et= new WebDriverWait(driver, 60);
 		et.until(ExpectedConditions.visibilityOf(leaseRentalBillingType));
 		Select se= new Select(leaseRentalBillingType);
-		se.selectByIndex(1);
+		se.selectByVisibleText(LeaseRentalBillingTypeID);
 	}
 	
 	public void clickOnSaveButton()

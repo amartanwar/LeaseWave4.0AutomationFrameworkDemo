@@ -15,6 +15,30 @@ public class UpdatesMenuPage extends BasePage
 	@FindBy(id="ctl00ctl04WebMenuControl_5")
 	private WebElement updateMenu;
 	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_1']/td/div")
+	private WebElement receivables;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_1_1']/td/div")
+	private WebElement sundryRecurringUpdate;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_1_3']/td/div")
+	private WebElement salesUseTax;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_1_3_1']/td/div/u")
+	private WebElement taxAssessment;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_2']/td/div")
+	private WebElement invoicing;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_2_1']/td/div")
+	private WebElement invoiceGroupUpdate;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_2_2']/td/div")
+	private WebElement invoiceDateUpdate;
+	
+	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_2_3']/td/div")
+	private WebElement invoiceGeneration;
+	
 	@FindBy(xpath=".//*[@id='ctl00ctl04WebMenuControl_5_4']/td/div")
 	private WebElement lease;
 	
@@ -74,7 +98,89 @@ public class UpdatesMenuPage extends BasePage
 		action.moveToElement(incomeRecognition).click().perform();
 	
 	}
-
 	
+	public void openInvoiceDateUpdatePage()
+	{
+		WebDriverWait wt1= new WebDriverWait(driver, 60);
+	    wt1.until(ExpectedConditions.visibilityOf(updateMenu));
+	    Actions action= new Actions(driver);
+		action.moveToElement(updateMenu).perform();
+		
+		WebDriverWait wt2= new WebDriverWait(driver, 60);
+	    wt2.until(ExpectedConditions.visibilityOf(invoicing));
+		action.moveToElement(invoicing).perform();
+		
+		WebDriverWait wt3= new WebDriverWait(driver, 60);
+	    wt3.until(ExpectedConditions.visibilityOf(invoiceGroupUpdate));
+		action.moveToElement(invoiceGroupUpdate).perform();
+		
+		WebDriverWait wt4= new WebDriverWait(driver, 60);
+	    wt4.until(ExpectedConditions.visibilityOf(invoiceDateUpdate));
+		action.moveToElement(invoiceDateUpdate).click().perform();
+	}
+
+	public void openInvoiceGroupUpdatePage()
+	{
+		WebDriverWait wt1= new WebDriverWait(driver, 60);
+	    wt1.until(ExpectedConditions.visibilityOf(updateMenu));
+	    Actions action= new Actions(driver);
+		action.moveToElement(updateMenu).perform();
+		
+		WebDriverWait wt2= new WebDriverWait(driver, 60);
+	    wt2.until(ExpectedConditions.visibilityOf(invoicing));
+		action.moveToElement(invoicing).perform();
+		
+		WebDriverWait wt3= new WebDriverWait(driver, 60);
+	    wt3.until(ExpectedConditions.visibilityOf(invoiceGroupUpdate));
+		action.moveToElement(invoiceGroupUpdate).click().perform();
+		
+	}
+	
+	
+	public void openSalesTaxUpdatePage()
+	{
+		WebDriverWait wt1= new WebDriverWait(driver, 60);
+	    wt1.until(ExpectedConditions.visibilityOf(updateMenu));
+	    Actions action= new Actions(driver);
+		action.moveToElement(updateMenu).perform();
+		
+		WebDriverWait wt2= new WebDriverWait(driver, 60);
+	    wt2.until(ExpectedConditions.visibilityOf(receivables));
+		action.moveToElement(receivables).perform();
+		
+		WebDriverWait wt4= new WebDriverWait(driver, 60);
+	    wt4.until(ExpectedConditions.visibilityOf(sundryRecurringUpdate));
+		action.moveToElement(sundryRecurringUpdate).perform();
+		
+		WebDriverWait wt5= new WebDriverWait(driver, 60);
+	    wt5.until(ExpectedConditions.visibilityOf(salesUseTax));
+		action.moveToElement(salesUseTax).perform();
+		
+		WebDriverWait wt3= new WebDriverWait(driver, 60);
+	    wt3.until(ExpectedConditions.visibilityOf(taxAssessment));
+		action.moveToElement(taxAssessment).click().perform();
+		
+	}
+
+	public void openInvoiceGenerationPage()
+	{
+		WebDriverWait wt1= new WebDriverWait(driver, 60);
+	    wt1.until(ExpectedConditions.visibilityOf(updateMenu));
+	    Actions action= new Actions(driver);
+		action.moveToElement(updateMenu).perform();
+		
+		WebDriverWait wt2= new WebDriverWait(driver, 60);
+	    wt2.until(ExpectedConditions.visibilityOf(invoicing));
+		action.moveToElement(invoicing).perform();
+		
+		WebDriverWait wt3= new WebDriverWait(driver, 60);
+	    wt3.until(ExpectedConditions.visibilityOf(invoiceGroupUpdate));
+		action.moveToElement(invoiceGroupUpdate).perform();
+		
+		WebDriverWait wt4= new WebDriverWait(driver, 60);
+	    wt4.until(ExpectedConditions.visibilityOf(invoiceGeneration));
+		action.moveToElement(invoiceGeneration).click().perform();
+		
+	}
 	
 }

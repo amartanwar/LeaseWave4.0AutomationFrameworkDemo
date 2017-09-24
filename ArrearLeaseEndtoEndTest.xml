@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="testscript.ArrearsAssetCreation"/>
+      <class name="testscript.ArrearsAssetValueTest"/>
+      <class name="testscript.ArrearsLeaseCreationTest"/>
+      <class name="testscript.ArrearsLeaseLTRtoSTUpdateTest"/>
+      <class name="testscript.ArrearsLeaseIncomeUpdateTest"/>
+      <class name="testscript.ArrearsInvoiceDateUpdateTest"/>
+      <class name="testscript.ArrearsSalesTaxUpdateTest"/>
+      <class name="testscript.ArrearsInvoiceGenerationUpdateTest"/>
+      <class name="testscript.ArrearsReceiptPostTest"/>
+    </classes>
+  </test> 
+</suite> 

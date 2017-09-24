@@ -49,17 +49,17 @@ public  class AssetListPage extends BasePage
 		
 	}
 	
-	public void searchByUnitNumber(String unitNumber) throws InterruptedException
+	public void searchByUnitNumber(String unNumber) throws InterruptedException
 	{
 		WebDriverWait wt1=new WebDriverWait(driver, 60);
 		wt1.until(ExpectedConditions.visibilityOf(unitnumber));
 		unitnumber.clear();
-		unitnumber.sendKeys(unitNumber);
+		unitnumber.sendKeys(unNumber);
 	}
 	
-	public void clickOnSearchButton() throws InterruptedException
+	public void clickOnSearchButton(String unNumber) throws InterruptedException
 	{
-		Thread.sleep(200);
+		Thread.sleep(1000);
 		WebDriverWait wt=new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.visibilityOf(searchButton));
 		searchButton.click();
@@ -76,7 +76,7 @@ public  class AssetListPage extends BasePage
 	public void clickONSelectButton()
 	{
 		WebDriverWait wt=new WebDriverWait(driver, 60);
-		wt.until(ExpectedConditions.visibilityOf(selectButton));
+		wt.until(ExpectedConditions.elementToBeClickable(selectButton));
 		selectButton.click();
 		
 	}

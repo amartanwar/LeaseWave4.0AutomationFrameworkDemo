@@ -1,254 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
-    <line>
-      <![CDATA[Auto-491 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-492 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-493 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-494 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-495 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-496 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-497 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-498 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-499 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Auto-500 Created successfully]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-491]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-492]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-493]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-494]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-495]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-496]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-497]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-498]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-499]]>
-    </line>
-    <line>
-      <![CDATA[Cost Assignment is done for Auto-500]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-491]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-492]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-493]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-494]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-495]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-496]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-497]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-498]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-499]]>
-    </line>
-    <line>
-      <![CDATA[Lease Successfully created for asset Auto-500]]>
-    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="1100443" started-at="2017-09-22T09:26:06Z" finished-at="2017-09-22T09:44:27Z">
+  <suite name="Suite" duration-ms="261157" started-at="2017-09-24T16:32:33Z" finished-at="2017-09-24T16:36:54Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1100443" started-at="2017-09-22T09:26:06Z" finished-at="2017-09-22T09:44:27Z">
-      <class name="testscript.LeaseBulkCreationTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.LeaseBulkCreationTest@1c7cbad]" name="openApplication" is-config="true" duration-ms="8684" started-at="2017-09-22T15:01:33Z" finished-at="2017-09-22T15:01:42Z">
+    <test name="Test" duration-ms="261157" started-at="2017-09-24T16:32:33Z" finished-at="2017-09-24T16:36:54Z">
+      <class name="testscript.RestructureAssetValueTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.RestructureAssetValueTest@1933fd1]" name="openApplication" is-config="true" duration-ms="8580" started-at="2017-09-24T22:03:03Z" finished-at="2017-09-24T22:03:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="LeaseBulkCreationTest1()[pri:0, instance:testscript.LeaseBulkCreationTest@1c7cbad]" name="LeaseBulkCreationTest1" duration-ms="764151" started-at="2017-09-22T15:01:42Z" finished-at="2017-09-22T15:14:26Z">
+        <test-method status="PASS" signature="AssetCostAssignmentTest()[pri:0, instance:testscript.RestructureAssetValueTest@1933fd1]" name="AssetCostAssignmentTest" duration-ms="26164" started-at="2017-09-24T22:03:12Z" finished-at="2017-09-24T22:03:38Z">
           <reporter-output>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-491]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-492]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-493]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-494]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-495]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-496]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-497]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-498]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-499]]>
-            </line>
-            <line>
-              <![CDATA[Lease Successfully created for asset Auto-500]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- LeaseBulkCreationTest1 -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.LeaseBulkCreationTest@1c7cbad]" name="closeApplication" is-config="true" duration-ms="869" started-at="2017-09-22T15:14:26Z" finished-at="2017-09-22T15:14:27Z">
+        </test-method> <!-- AssetCostAssignmentTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.RestructureAssetValueTest@1933fd1]" name="closeApplication" is-config="true" duration-ms="1159" started-at="2017-09-24T22:03:38Z" finished-at="2017-09-24T22:03:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LeaseBulkCreationTest1 status=SUCCESS method=LeaseBulkCreationTest.LeaseBulkCreationTest1()[pri:0, instance:testscript.LeaseBulkCreationTest@1c7cbad] output=Lease Successfully created for asset Auto-491]]]>
+                <![CDATA[[TestResult name=AssetCostAssignmentTest status=SUCCESS method=RestructureAssetValueTest.AssetCostAssignmentTest()[pri:0, instance:testscript.RestructureAssetValueTest@1933fd1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- testscript.LeaseBulkCreationTest -->
-      <class name="testscript.AssetBulkCreationTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetBulkCreationTest@120ebad]" name="openApplication" is-config="true" duration-ms="10526" started-at="2017-09-22T14:56:06Z" finished-at="2017-09-22T14:56:17Z">
+      </class> <!-- testscript.RestructureAssetValueTest -->
+      <class name="testscript.RestructureLeaseLTtoSTUpdate">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.RestructureLeaseLTtoSTUpdate@153acfe]" name="openApplication" is-config="true" duration-ms="8900" started-at="2017-09-24T22:05:12Z" finished-at="2017-09-24T22:05:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="AssetBulkCreation1()[pri:0, instance:testscript.AssetBulkCreationTest@120ebad]" name="AssetBulkCreation1" duration-ms="171685" started-at="2017-09-22T14:56:17Z" finished-at="2017-09-22T14:59:09Z">
+        <test-method status="PASS" signature="testArrearsLeaseLTRtoSTUpdate()[pri:0, instance:testscript.RestructureLeaseLTtoSTUpdate@153acfe]" name="testArrearsLeaseLTRtoSTUpdate" duration-ms="14077" started-at="2017-09-24T22:05:21Z" finished-at="2017-09-24T22:05:35Z">
           <reporter-output>
-            <line>
-              <![CDATA[Auto-491 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-492 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-493 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-494 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-495 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-496 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-497 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-498 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-499 Created successfully]]>
-            </line>
-            <line>
-              <![CDATA[Auto-500 Created successfully]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- AssetBulkCreation1 -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetBulkCreationTest@120ebad]" name="closeApplication" is-config="true" duration-ms="853" started-at="2017-09-22T14:59:09Z" finished-at="2017-09-22T14:59:09Z">
+        </test-method> <!-- testArrearsLeaseLTRtoSTUpdate -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.RestructureLeaseLTtoSTUpdate@153acfe]" name="closeApplication" is-config="true" duration-ms="764" started-at="2017-09-24T22:05:35Z" finished-at="2017-09-24T22:05:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AssetBulkCreation1 status=SUCCESS method=AssetBulkCreationTest.AssetBulkCreation1()[pri:0, instance:testscript.AssetBulkCreationTest@120ebad] output=Auto-491 Created successfully]]]>
+                <![CDATA[[TestResult name=testArrearsLeaseLTRtoSTUpdate status=SUCCESS method=RestructureLeaseLTtoSTUpdate.testArrearsLeaseLTRtoSTUpdate()[pri:0, instance:testscript.RestructureLeaseLTtoSTUpdate@153acfe] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- testscript.AssetBulkCreationTest -->
-      <class name="testscript.AssetBulkCostAssignmentTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.AssetBulkCostAssignmentTest@19f379]" name="openApplication" is-config="true" duration-ms="8091" started-at="2017-09-22T14:59:09Z" finished-at="2017-09-22T14:59:18Z">
+      </class> <!-- testscript.RestructureLeaseLTtoSTUpdate -->
+      <class name="testscript.RestructureLeaseIncomeUpdate">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.RestructureLeaseIncomeUpdate@16905e]" name="openApplication" is-config="true" duration-ms="8362" started-at="2017-09-24T22:05:36Z" finished-at="2017-09-24T22:05:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="AssetBulkCostAssignment1()[pri:0, instance:testscript.AssetBulkCostAssignmentTest@19f379]" name="AssetBulkCostAssignment1" duration-ms="134536" started-at="2017-09-22T14:59:18Z" finished-at="2017-09-22T15:01:32Z">
+        <test-method status="PASS" signature="LeaseIncomeUpdateTest()[pri:0, instance:testscript.RestructureLeaseIncomeUpdate@16905e]" name="LeaseIncomeUpdateTest" duration-ms="15470" started-at="2017-09-24T22:05:44Z" finished-at="2017-09-24T22:06:00Z">
           <reporter-output>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-491]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-492]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-493]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-494]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-495]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-496]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-497]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-498]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-499]]>
-            </line>
-            <line>
-              <![CDATA[Cost Assignment is done for Auto-500]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- AssetBulkCostAssignment1 -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.AssetBulkCostAssignmentTest@19f379]" name="closeApplication" is-config="true" duration-ms="1019" started-at="2017-09-22T15:01:32Z" finished-at="2017-09-22T15:01:33Z">
+        </test-method> <!-- LeaseIncomeUpdateTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.RestructureLeaseIncomeUpdate@16905e]" name="closeApplication" is-config="true" duration-ms="879" started-at="2017-09-24T22:06:00Z" finished-at="2017-09-24T22:06:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AssetBulkCostAssignment1 status=SUCCESS method=AssetBulkCostAssignmentTest.AssetBulkCostAssignment1()[pri:0, instance:testscript.AssetBulkCostAssignmentTest@19f379] output=Cost Assignment is done for Auto-491]]]>
+                <![CDATA[[TestResult name=LeaseIncomeUpdateTest status=SUCCESS method=RestructureLeaseIncomeUpdate.LeaseIncomeUpdateTest()[pri:0, instance:testscript.RestructureLeaseIncomeUpdate@16905e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- testscript.AssetBulkCostAssignmentTest -->
+      </class> <!-- testscript.RestructureLeaseIncomeUpdate -->
+      <class name="testscript.RestructureLeaseCreationTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.RestructureLeaseCreationTest@8a9f61]" name="openApplication" is-config="true" duration-ms="8855" started-at="2017-09-24T22:03:39Z" finished-at="2017-09-24T22:03:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="RestructureLeaseTest()[pri:0, instance:testscript.RestructureLeaseCreationTest@8a9f61]" name="RestructureLeaseTest" duration-ms="82850" started-at="2017-09-24T22:03:48Z" finished-at="2017-09-24T22:05:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RestructureLeaseTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.RestructureLeaseCreationTest@8a9f61]" name="closeApplication" is-config="true" duration-ms="929" started-at="2017-09-24T22:05:11Z" finished-at="2017-09-24T22:05:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RestructureLeaseTest status=SUCCESS method=RestructureLeaseCreationTest.RestructureLeaseTest()[pri:0, instance:testscript.RestructureLeaseCreationTest@8a9f61] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.RestructureLeaseCreationTest -->
+      <class name="testscript.RestructureAssetCreation">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.RestructureAssetCreation@12cc05a]" name="openApplication" is-config="true" duration-ms="9113" started-at="2017-09-24T22:02:33Z" finished-at="2017-09-24T22:02:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="CreatingAssetForLeaseRestructureTest()[pri:0, instance:testscript.RestructureAssetCreation@12cc05a]" name="CreatingAssetForLeaseRestructureTest" duration-ms="20740" started-at="2017-09-24T22:02:42Z" finished-at="2017-09-24T22:03:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreatingAssetForLeaseRestructureTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.RestructureAssetCreation@12cc05a]" name="closeApplication" is-config="true" duration-ms="932" started-at="2017-09-24T22:03:02Z" finished-at="2017-09-24T22:03:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreatingAssetForLeaseRestructureTest status=SUCCESS method=RestructureAssetCreation.CreatingAssetForLeaseRestructureTest()[pri:0, instance:testscript.RestructureAssetCreation@12cc05a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.RestructureAssetCreation -->
+      <class name="testscript.RestructureLeaseTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:testscript.RestructureLeaseTest@2d45ba]" name="openApplication" is-config="true" duration-ms="8829" started-at="2017-09-24T22:06:00Z" finished-at="2017-09-24T22:06:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="leaseRestructureSmokeTest()[pri:0, instance:testscript.RestructureLeaseTest@2d45ba]" name="leaseRestructureSmokeTest" duration-ms="43664" started-at="2017-09-24T22:06:09Z" finished-at="2017-09-24T22:06:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leaseRestructureSmokeTest -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:testscript.RestructureLeaseTest@2d45ba]" name="closeApplication" is-config="true" duration-ms="854" started-at="2017-09-24T22:06:53Z" finished-at="2017-09-24T22:06:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=leaseRestructureSmokeTest status=SUCCESS method=RestructureLeaseTest.leaseRestructureSmokeTest()[pri:0, instance:testscript.RestructureLeaseTest@2d45ba] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testscript.RestructureLeaseTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

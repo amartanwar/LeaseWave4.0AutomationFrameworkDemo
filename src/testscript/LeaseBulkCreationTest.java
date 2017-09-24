@@ -27,7 +27,7 @@ public class LeaseBulkCreationTest extends BaseTest
 	@Test
 	public void LeaseBulkCreationTest1() throws InterruptedException, AWTException, IOException
 	{
-		for(int i=1;i<=5;i++)
+		for(int i=1;i<=4;i++)
 		{
 			//Fetching values from xl
 			String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", i,0);
@@ -41,7 +41,7 @@ public class LeaseBulkCreationTest extends BaseTest
 			
 			//Customer list screen
 			CustomerListPage cl=new CustomerListPage(driver);
-			cl.enterAccountNumber("am-10088");
+			cl.enterAccountNumber("005162");
 			cl.clickOnsearchButton();
 			cl.clickOnSelectButton();
 			
@@ -53,16 +53,16 @@ public class LeaseBulkCreationTest extends BaseTest
 			//LeaseInventoryInlease screen
 			LeaseInventoryInLeasePage ilp=new LeaseInventoryInLeasePage(driver);
 			String beforeWindow = driver.getWindowHandle();
-			System.out.println("1"+ driver.getTitle());
+//			System.out.println("1"+ driver.getTitle());
 			ilp.clickOnAddButton2();
 			
 		
 			//AssetList page
 			AssetListPage asl=new AssetListPage(driver);
-			System.out.println("2 "+driver.getTitle());
+//			System.out.println("2 "+driver.getTitle());
 			asl.searchByUnitNumber(un);
-			System.out.println("3 "+driver.getTitle());
-			asl.clickOnSearchButton();
+//			System.out.println("3 "+driver.getTitle());
+			asl.clickOnSearchButton(un);
 			asl.selectCheckBox();
 			asl.clickOnSelectExportButton();
 			Thread.sleep(1000);
@@ -84,8 +84,8 @@ public class LeaseBulkCreationTest extends BaseTest
 			lp.selectGLDepartment();
 			lp.selectInterimRentGLTemplate();
 			lp.selectreceiptCashGLTemplate();
-			lp.selectProductChargeBillingType();
-			lp.selectLeaseRentalBillingType();
+			lp.selectProductChargeBillingType("Arrears");
+			lp.selectLeaseRentalBillingType("Arrears");
 			lp.clickOnSaveButton();
 		
 			

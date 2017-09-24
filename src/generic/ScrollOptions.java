@@ -47,8 +47,9 @@ public class ScrollOptions
 		for(int i=1;i<=Count;i++)
 		{
 			rb.keyPress(KeyEvent.VK_DOWN);
+			rb.keyRelease(KeyEvent.VK_DOWN);
 		}
-		rb.keyRelease(KeyEvent.VK_DOWN);
+		
 	
 	
 	}

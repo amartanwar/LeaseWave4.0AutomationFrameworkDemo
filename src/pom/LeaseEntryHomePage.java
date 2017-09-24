@@ -24,6 +24,15 @@ public class LeaseEntryHomePage extends BasePage
 
 	@FindBy(id="ctl00_NB_PH_UCLeaseEntyLink_cmdSave_cmdButtonControl")
 	private WebElement saveButton;
+	
+	@FindBy(id="ctl00_NB_PH_UCLeaseEntyLink_ReStructure")
+	private WebElement restrutureScreen;
+	
+	@FindBy(id="ctl00_NB_PH_UCLeaseEntyLink_cmdLeaseClassification")
+	private WebElement leaseClassification;
+	
+	@FindBy(id="ctl00_NB_PH_UCLeaseEntyLink_cmdAccural")
+	private WebElement leaseAccrual;
 
 	public LeaseEntryHomePage(WebDriver driver) 
 	{
@@ -60,17 +69,39 @@ public class LeaseEntryHomePage extends BasePage
 		saveButton.click();
 	}
 	
+	public void clickOnRestructureScreen() throws InterruptedException
+	{
+		WebDriverWait wt=new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.titleIs("Lease Entry Home"));
+		restrutureScreen.click();
+	}
+	
+	public void clickOnLeaseClassificationScreen() throws InterruptedException
+	{
+		WebDriverWait wt=new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.titleIs("Lease Entry Home"));
+		leaseClassification.click();
+	}
+	
+	public void clickOnLeaseAccrualScreen() throws InterruptedException
+	{
+		WebDriverWait wt=new WebDriverWait(driver, 60);
+		wt.until(ExpectedConditions.titleIs("Lease Entry Home"));
+		leaseAccrual.click();
+	}
 	
 	public void handlePopup1()
 	{
-		for (int i=1;i<=3;i++)
+		for (int i=1;i<=2;i++)
 		{
 			try
 			{
+				
 				WebDriverWait wt=new WebDriverWait(driver, 10);
 				wt.until(ExpectedConditions.alertIsPresent());
 				Alert alert = driver.switchTo().alert();
 				alert.accept();
+				
 			}
 			catch (Exception e)
 			{

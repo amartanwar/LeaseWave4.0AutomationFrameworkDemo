@@ -28,6 +28,7 @@ public class LeaseProfileTest extends BaseTest
 	{
 		//Fetching values from xl
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
+		String accountNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,3);
 		
 		//Opening the lease lease creation page
 //		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);
@@ -38,7 +39,7 @@ public class LeaseProfileTest extends BaseTest
 		
 		//Customer list screen
 		CustomerListPage cl=new CustomerListPage(driver);
-		cl.enterAccountNumber("am-10088");
+		cl.enterAccountNumber(accountNumber);
 		cl.clickOnsearchButton();
 		cl.clickOnSelectButton();
 		
@@ -50,11 +51,11 @@ public class LeaseProfileTest extends BaseTest
 		//LeaseInventoryInlease screen
 		LeaseInventoryInLeasePage ilp=new LeaseInventoryInLeasePage(driver);
 		String beforeWindow = driver.getWindowHandle();
-		ilp.clickOnAddButon();
+		ilp.clickOnAddButton2();
 		//AssetList page
 		AssetListPage asl=new AssetListPage(driver);
 		asl.searchByUnitNumber(un);
-		asl.clickOnSearchButton();
+		asl.clickOnSearchButton(un);
 		asl.selectCheckBox();
 		Thread.sleep(2000);
 		asl.clickOnSelectExportButton();
@@ -77,8 +78,8 @@ public class LeaseProfileTest extends BaseTest
 		lp.selectGLDepartment();
 		lp.selectInterimRentGLTemplate();
 		lp.selectreceiptCashGLTemplate();
-		lp.selectProductChargeBillingType();
-		lp.selectLeaseRentalBillingType();
+		lp.selectProductChargeBillingType("Arrears");
+		lp.selectLeaseRentalBillingType("Arrears");
 		lp.clickOnSaveButton();
 	
 		
@@ -95,11 +96,11 @@ public class LeaseProfileTest extends BaseTest
 		//Lease Structure screen
 		le.clickOnStructureScreen();
 		LeaseStructurePage ls= new LeaseStructurePage(driver);
-		ls.enterNumberofPayments("12");
-		ls.enterCommencementDate("7/1/2017");
+		ls.enterNumberofPayments("36");
+		ls.enterCommencementDate("10/1/2017");
 		Thread.sleep(2000);
-		ls.enterRegularTotalPayment("1200");
-		ls.enterRegularAdminFee("1000");
+		ls.enterRegularTotalPayment("1000");
+		ls.enterRegularAdminFee("10");
 		ls.enterGLPostDate();
 		ls.clickOnSaveButton();
 		

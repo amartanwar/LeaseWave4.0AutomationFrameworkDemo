@@ -27,11 +27,17 @@ public class jobListPage extends BasePage
 
 	public void validateJobStatus() throws InterruptedException
 	{
+		WebDriverWait wt= new WebDriverWait(driver, 100);
+		wt.until(ExpectedConditions.visibilityOf(searchButton));
+		
 		for(int i=1;i<=9000;i++)
 		{
-			WebDriverWait wt= new WebDriverWait(driver, 60);
-			wt.until(ExpectedConditions.visibilityOf(jobStatus));
-			searchButton.click();
+			searchButton.click();	
+		
+			WebDriverWait wt1= new WebDriverWait(driver, 100);
+			wt1.until(ExpectedConditions.visibilityOf(jobStatus));
+			Thread.sleep(3000);
+			
 			String jobResult = jobStatus.getText();
 			if(jobResult.equals("Completed Successfully")==true)
 			{

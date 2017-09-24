@@ -6,7 +6,6 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
-import generic.excel;
 import pom.AssetListPage;
 import pom.CreateNewLeasePage;
 import pom.CustomerListPage;
@@ -27,7 +26,7 @@ public class LeaseCodeTest extends BaseTest
 	public void LeaseProfileCreationSmokeTest() throws InterruptedException, AWTException, IOException
 	{
 		//Fetching values from xl
-		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
+//		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		
 		//Opening the lease lease creation page
 //		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);
@@ -44,7 +43,7 @@ public class LeaseCodeTest extends BaseTest
 		
 		//create new Lease screen
 		CreateNewLeasePage clp= new CreateNewLeasePage(driver);
-		clp.enterLeaseSequenceNumber(un);
+		clp.enterLeaseSequenceNumber("my-377719");
 		clp.clcikOnSaveButton();
 		
 		//LeaseInventoryInlease screen
@@ -54,8 +53,8 @@ public class LeaseCodeTest extends BaseTest
 		
 		//AssetList page
 		AssetListPage asl=new AssetListPage(driver);
-		asl.searchByUnitNumber(un);
-		asl.clickOnSearchButton();
+		asl.searchByUnitNumber("Auto-502");
+		asl.clickOnSearchButton("fdfd");
 		asl.selectCheckBox();
 		Thread.sleep(2000);
 		asl.clickOnSelectExportButton();
@@ -78,8 +77,8 @@ public class LeaseCodeTest extends BaseTest
 		lp.selectGLDepartment();
 		lp.selectInterimRentGLTemplate();
 		lp.selectreceiptCashGLTemplate();
-		lp.selectProductChargeBillingType();
-		lp.selectLeaseRentalBillingType();
+		lp.selectProductChargeBillingType("Advance EOM");
+		lp.selectLeaseRentalBillingType("Advance EOM");
 		lp.clickOnSaveButton();
 	
 		
@@ -96,8 +95,9 @@ public class LeaseCodeTest extends BaseTest
 		//Lease Structure screen
 		le.clickOnStructureScreen();
 		LeaseStructurePage ls= new LeaseStructurePage(driver);
-		ls.enterNumberofPayments("12");
+		ls.enterNumberofPayments("36");
 		ls.enterCommencementDate("7/1/2017");
+		ls.selectLeaseFrequency("Quarterly");
 		Thread.sleep(2000);
 		ls.enterRegularTotalPayment("1200");
 		ls.enterRegularAdminFee("1000");
