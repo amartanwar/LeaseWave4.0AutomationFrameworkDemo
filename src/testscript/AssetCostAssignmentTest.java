@@ -16,7 +16,8 @@ public class AssetCostAssignmentTest extends BaseTest
 	@Test
 	public void AssetCostAssignmentSmokeTest() throws InterruptedException, IOException
 	{
-		String unitNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
+		String unitNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 6,0);
+		String cost=excel.getNumericCellValue("./TestData/Input.xlsx", "AssetProfile", 6,11);
 //		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);
 //		lwh.clickOnPortFolioManagement();
 		AssetMenuPage asm= new AssetMenuPage(driver);
@@ -30,7 +31,7 @@ public class AssetCostAssignmentTest extends BaseTest
 		asl.clickONSelectButton();
 		asvl.selectGridCheckBox();
 		asvl.selectAssignmentOperator();
-		asvl.enterCostOfAsset("1200");
+		asvl.enterCostOfAsset(cost);
 		asvl.clickOnAddButton();
 		asvl.clickOnAssignmentButton();
 //		Thread.sleep(2000);

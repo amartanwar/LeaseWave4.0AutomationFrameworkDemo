@@ -15,7 +15,7 @@ public class ArrearsAssetValueTest extends BaseTest
 	@Test
 	public void AssetCostAssignmentSmokeTest() throws InterruptedException, IOException
 	{
-		int row=2;
+		int row=1;
 		String unitNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,0);
 		String cost=excel.getNumericCellValue("./TestData/Input.xlsx", "AssetProfile", row,11);
 //		LeaseWaveHeader lwh=new LeaseWaveHeader(driver);

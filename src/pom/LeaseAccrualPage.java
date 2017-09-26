@@ -44,11 +44,12 @@ public class LeaseAccrualPage extends BasePage
 	}
 	
 	
-	public void verifyYeild(String expectedyeildWithoutIDC,String expectedyeildWithIDC) throws AWTException
+	public void verifyYeild(String expectedCustomerYield,String expectedyeildWithoutIDC,String expectedyeildWithIDC) throws AWTException, InterruptedException
 	{
 		ScrollOptions.scrollingEndofAPage2(15);
 //		org.testng.Assert.assertEquals(customerYeild.getAttribute("uv"), "198.344143","Customer Yeild is not matching");
-		
+		Thread.sleep(2000);
+		org.testng.Assert.assertEquals(customerYeild.getAttribute("uv"), expectedCustomerYield,"customerYeild is not matching");
 		org.testng.Assert.assertEquals(yeildWithoutIDC.getAttribute("uv"), expectedyeildWithoutIDC,"yeildWithoutIDC is not matching");
 		org.testng.Assert.assertEquals(yeildWithIDC.getAttribute("uv"), expectedyeildWithIDC,"yeildWithIDC is not matching");
 		

@@ -35,8 +35,9 @@ public class RestructureLeaseTest extends BaseTest
 		rp.enterRebookDate("10/31/2017");
 		rp.clickOnSaveButton();
 		
+		
 		//Open Lease Restructure screen
-		LeaseEntryHomePage le=new LeaseEntryHomePage(driver);
+		LeaseEntryHomePage le= new LeaseEntryHomePage(driver);
 		le.clickOnRestructureScreen();
 		
 		//select restructure gl template

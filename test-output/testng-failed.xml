@@ -3,20 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="testscript.RebookLeaseTest">
+      <class name="testscript.LeaseYeildAndPaymentVerificationTest">
         <methods>
           <include name="closeApplication"/>
-          <include name="openApplication"/>
-          <include name="leaseRebookSmokeTest"/>
-        </methods>
-      </class> <!-- testscript.RebookLeaseTest -->
-      <class name="testscript.RebookLeaseCreationTest">
-        <methods>
-          <include name="ArrearLeaseTest"/>
-          <include name="closeApplication"/>
+          <include name="LeaseYeildAndPaymentVerification"/>
           <include name="openApplication"/>
         </methods>
-      </class> <!-- testscript.RebookLeaseCreationTest -->
+      </class> <!-- testscript.LeaseYeildAndPaymentVerificationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

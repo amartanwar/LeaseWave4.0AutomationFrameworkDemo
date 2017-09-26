@@ -17,7 +17,7 @@ public class AssetProfileTest extends BaseTest
 	public void AssetCreationSmokeTest() throws InterruptedException, IOException 
 	{
 		//Fetching data from xl
-		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
+		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 6,0);
 		String type=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,1);
 		String usageCondition=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,2);
 		String accountNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,3);

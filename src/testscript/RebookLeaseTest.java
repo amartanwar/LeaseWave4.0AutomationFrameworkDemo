@@ -6,10 +6,14 @@ import org.testng.annotations.Test;
 
 import generic.BaseTest;
 import generic.excel;
+import pom.LeaseAccrualPage;
+import pom.LeaseClassificationPage;
 import pom.LeaseEntryHomePage;
 import pom.LeaseListPage;
 import pom.LeaseMenuPage;
+import pom.LeasePaymentSchedulePage;
 import pom.LeaseRebookParametersPage;
+import pom.LeaseStructurePage;
 
 public class RebookLeaseTest extends BaseTest
 {
@@ -41,8 +45,31 @@ public class RebookLeaseTest extends BaseTest
 		//click on save
 		lp.clickOnSaveButton();
 		
-		//select the lease booking status
+		//Open Structure screen and change term
 		LeaseEntryHomePage le=new LeaseEntryHomePage(driver);
+		le.clickOnStructureScreen();
+		LeaseStructurePage ls= new LeaseStructurePage(driver);
+		ls.enterNumberofPayments("4");
+		ls.enterRegularAdminFee("0");
+		ls.clickOnSaveButton();
+		
+		LeasePaymentSchedulePage lps=new LeasePaymentSchedulePage(driver);
+		lps.clickOnCloseButton();
+		
+		//90 percent test
+		le.clickOnLeaseClassificationScreen();
+		LeaseClassificationPage lc= new LeaseClassificationPage(driver);
+		lc.clickOnPerform90PercentTestButton();
+		lc.clickOnSaveButton();
+		
+		//compute yield
+		le.clickOnLeaseAccrualScreen();
+		LeaseAccrualPage la= new LeaseAccrualPage(driver);
+		la.clickOnComputeYieldButton();
+		la.clickOnSaveButton();
+		la.handlePopup();
+		
+		//select the lease booking status
 		le.selectLeaseBookingStatus();
 		
 		//click on save Button

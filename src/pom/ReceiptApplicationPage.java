@@ -2,7 +2,6 @@ package pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -57,14 +56,17 @@ public class ReceiptApplicationPage extends BasePage
 	{
 		WebDriverWait wt= new WebDriverWait(driver, 60);
 		wt.until(ExpectedConditions.elementToBeClickable(amountToBeApplied));
-		RemoteWebDriver jse= (RemoteWebDriver)driver;
-		jse.executeScript("document.getElementById(ctl00xFxPHxgrdInvoicexgrdList_rc_0_18).value='20'");
+//		RemoteWebDriver jse= (RemoteWebDriver)driver;
+//		jse.executeScript("document.getElementById(ctl00xFxPHxgrdInvoicexgrdList_rc_0_18).value='20'");
 		
-//		amountToBeApplied.click();
+		amountToBeApplied.click();
+		Thread.sleep(1000);
+		System.out.println("clickpass");
+		amountToBeApplied.clear();
+		System.out.println("clear pass");
 //		Thread.sleep(1000);
-//		amountToBeApplied.clear();
-//		Thread.sleep(1000);
-//		amountToBeApplied.sendKeys(partialAmount);
+		amountToBeApplied.sendKeys(partialAmount);
+		System.out.println("partialAmount pass");
 	}
 	
 	public void clickOnApplyButton() throws InterruptedException

@@ -42,7 +42,7 @@ public class ReceiptPostingPartiallyPaid extends BaseTest
 		rs.selectReceiptGLTemplate();
 		
 		//Enter check number
-		rs.enterCheckNumber("check3xndfe331- "+leaseSeqNumber);
+		rs.enterCheckNumber("check53xdffdfdfdgndfe331- "+leaseSeqNumber);
 	
 		//Save the receipt
 		rs.clickOnSaveAndSelect();

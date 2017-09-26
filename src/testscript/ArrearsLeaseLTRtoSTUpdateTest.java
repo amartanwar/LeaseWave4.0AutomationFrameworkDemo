@@ -13,7 +13,7 @@ public class ArrearsLeaseLTRtoSTUpdateTest extends BaseTest
 	@Test
 	public void testArrearsLeaseLTRtoSTUpdate() throws InterruptedException
 	{
-		String leaseSequenceNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 2,0);
+		String leaseSequenceNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		
 		//opening MovingLongTermtoShorTermUpdatePage
 //		LeaseWaveHeader lw= new LeaseWaveHeader(driver);

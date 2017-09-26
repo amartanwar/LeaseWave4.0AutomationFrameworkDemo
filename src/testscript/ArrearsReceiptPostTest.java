@@ -6,10 +6,10 @@ import org.testng.annotations.Test;
 
 import generic.BaseTest;
 import generic.excel;
+import pom.InvoiceSearchPage;
 import pom.ReceiptApplicationPage;
 import pom.ReceiptListPage;
 import pom.ReceiptSetupPage;
-import pom.ReceivableSearchPage;
 import pom.ReceivablesAndReceiptsMenuPage;
 
 public class ArrearsReceiptPostTest extends BaseTest 
@@ -18,7 +18,7 @@ public class ArrearsReceiptPostTest extends BaseTest
 	public void ReceiptPostTest() throws InterruptedException, IOException
 	{
 		//Fetching data from xl
-		String leaseSeqNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 3,0);
+		String leaseSeqNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 				
 		//Opening the Receipt Setup page
 		ReceivablesAndReceiptsMenuPage rr= new ReceivablesAndReceiptsMenuPage(driver);
@@ -48,16 +48,17 @@ public class ArrearsReceiptPostTest extends BaseTest
 		rs.clickOnSaveAndSelect();
 		
 		//Validate the receipt setup test
-		rs.verfyTittle("Receivable Search", "Failed to create Receipt");
+		rs.verfyTittle("Invoice Search", "Failed to create Receipt");
 		
 		//select lease sequenceNumber
-		ReceivableSearchPage is=new ReceivableSearchPage(driver);
+		InvoiceSearchPage is= new InvoiceSearchPage(driver);
 		
 		//enter lease Sequence Number
-		is.enterLeaseSequenceNumber("Auto-635");
+		is.selectLeaseSequenceNumberRadioButton();
+		is.enterLeaseSequenceNumber(leaseSeqNumber);
 		
 		//click on ApplyReceipt
-		is.clickOnApplyReceiptButton();
+		is.clickOnSaveAndApplyButton();
 		
 		//Validate the receipt posting ByInvoice
 		rs.verfyTittle("RECEIPT APPLICATION - CASH", "Failed to open Receipt Application");

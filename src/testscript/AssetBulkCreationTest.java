@@ -24,7 +24,7 @@ public class AssetBulkCreationTest extends BaseTest
 			asm.clickOnAssetProfile();
 			AssetListPage  aslp= new AssetListPage(driver);
 			
-			for(int j=1;j<=5;j++)
+			for(int j=1;j<=3;j++)
 				{
 					//Fetching data from xl
 					String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", j,0);

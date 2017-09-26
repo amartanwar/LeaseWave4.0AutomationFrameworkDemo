@@ -27,7 +27,7 @@ public class ArrearsLeaseCreationTest extends BaseTest
 	public void ArrearLeaseTest() throws InterruptedException, AWTException, IOException
 	{
 		//Fetching values from xl
-		int row=2;
+		int row=1;
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,0);
 		String accountNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,3);
 		String leaseBillingType=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,12);

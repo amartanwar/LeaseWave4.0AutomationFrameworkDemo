@@ -13,7 +13,7 @@ public class ArrearsInvoiceDateUpdateTest extends BaseTest
 	@Test
 	public void invoiceDateUpdateTest() throws InterruptedException
 	{
-		String leaseSequenceNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 2,0);
+		String leaseSequenceNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
 		//opening Lease Income recoginition screen
 //		LeaseWaveHeader lw =new LeaseWaveHeader(driver);
 //		lw.clickOnPortFolioManagement();

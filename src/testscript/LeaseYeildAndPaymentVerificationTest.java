@@ -27,7 +27,14 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 	public void LeaseYeildAndPaymentVerification () throws InterruptedException, AWTException, IOException
 	{
 		//Fetching values from xl
-				String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,0);
+		int row=6;
+		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,0);
+		String accountNumber=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,3);
+		String leaseBillingType=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,12);
+		String leaseFrequency=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,13);
+		String leaseTerm=excel.getNumericCellValue("./TestData/Input.xlsx", "AssetProfile", row,14);
+		String leaseRental=excel.getNumericCellValue("./TestData/Input.xlsx", "AssetProfile", row,15);
+		
 				
 				//Opening the lease lease creation page
 //				LeaseWaveHeader lwh=new LeaseWaveHeader(driver);
@@ -38,7 +45,7 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				
 				//Customer list screen
 				CustomerListPage cl=new CustomerListPage(driver);
-				cl.enterAccountNumber("am-10088");
+				cl.enterAccountNumber(accountNumber);
 				cl.clickOnsearchButton();
 				cl.clickOnSelectButton();
 				
@@ -50,7 +57,7 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				//LeaseInventoryInlease screen
 				LeaseInventoryInLeasePage ilp=new LeaseInventoryInLeasePage(driver);
 				String beforeWindow = driver.getWindowHandle();
-				ilp.clickOnAddButon();
+				ilp.clickOnAddButton2();
 				//AssetList page
 				AssetListPage asl=new AssetListPage(driver);
 				asl.searchByUnitNumber(un);
@@ -78,7 +85,7 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				lp.selectInterimRentGLTemplate();
 				lp.selectreceiptCashGLTemplate();
 				lp.selectProductChargeBillingType("Arrears");
-				lp.selectLeaseRentalBillingType("Arrears");
+				lp.selectLeaseRentalBillingType(leaseBillingType);
 				lp.clickOnSaveButton();
 			
 				
@@ -95,11 +102,11 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				//Lease Structure screen
 				le.clickOnStructureScreen();
 				LeaseStructurePage ls= new LeaseStructurePage(driver);
-				ls.enterNumberofPayments("12");
-				ls.enterCommencementDate("7/1/2017");
+				ls.enterNumberofPayments(leaseTerm);
+				ls.enterCommencementDate("10/1/2017");
+				ls.selectLeaseFrequency(leaseFrequency);
 				Thread.sleep(2000);
-				ls.enterRegularTotalPayment("1200");
-				ls.enterRegularAdminFee("1000");
+				ls.enterRegularTotalPayment(leaseRental);
 				ls.enterGLPostDate();
 				ls.clickOnSaveButton();
 				
@@ -120,7 +127,7 @@ public class LeaseYeildAndPaymentVerificationTest extends BaseTest
 				LeaseAccrualPage la=new LeaseAccrualPage(driver);
 				la.clickOnComputeYieldButton();
 				//Verifying the Yeild
-				la.verifyYeild("1416.200486", "1417.200486");
+				la.verifyYeild("6.294502", "6.294502","6.294502");
 				la.clickOnSaveButton();
 				la.handlePopup();
 				

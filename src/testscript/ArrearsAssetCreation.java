@@ -16,7 +16,7 @@ public class ArrearsAssetCreation extends BaseTest
 	public void CreatingAssetForArrearsLeaseTest() throws InterruptedException, IOException 
 	{
 		//Fetching data from xl
-		int row=2;
+		int row=1;
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,0);
 		String type=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,1);
 		String usageCondition=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", 1,2);
