@@ -40,13 +40,14 @@ public class LeaseMenuPage extends BasePage
 		newLease.click();
 	}
 	
-	public void openLeaseRebookPage()
+	public void openLeaseRebookPage() throws InterruptedException
 	{
 		WebDriverWait wt1= new WebDriverWait(driver, 60);
 	    wt1.until(ExpectedConditions.visibilityOf(leaseMenu));
+	    
 	    Actions action= new Actions(driver);
 		action.moveToElement(leaseMenu).perform();
-		
+		Thread.sleep(2000);
 		WebDriverWait wt2= new WebDriverWait(driver, 60);
 	    wt2.until(ExpectedConditions.visibilityOf(rebook));
 		action.moveToElement(rebook).click().perform();
@@ -60,7 +61,7 @@ public class LeaseMenuPage extends BasePage
 		action.moveToElement(leaseMenu).perform();
 		
 		WebDriverWait wt2= new WebDriverWait(driver, 60);
-	    wt2.until(ExpectedConditions.visibilityOf(restructure));
+	    wt2.until(ExpectedConditions.elementToBeClickable(restructure));
 		action.moveToElement(restructure).click().perform();
 	}
 }

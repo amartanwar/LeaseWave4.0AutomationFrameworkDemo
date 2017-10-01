@@ -36,6 +36,13 @@ public class LeaseListPage extends BasePage
 		unitNumber.sendKeys(unNumber);
 	}
 	
+	public void searchByUnitNumber2(String unNumber) throws InterruptedException
+	{
+		WebDriverWait wt1=new WebDriverWait(driver, 60);
+		wt1.until(ExpectedConditions.visibilityOf(unitNumber));
+		unitNumber.sendKeys(unNumber);
+	}
+	
 	public void clickOnSearchButton() throws InterruptedException
 	{
 		Thread.sleep(1000);

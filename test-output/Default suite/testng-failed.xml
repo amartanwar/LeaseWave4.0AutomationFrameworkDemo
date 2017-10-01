@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testscript.RestructureLeaseTest">
+      <class name="scenarios.LeaseRebookTest">
         <methods>
           <include name="closeApplication"/>
+          <include name="LeaseRebookSmokeTest"/>
           <include name="openApplication"/>
-          <include name="leaseRestructureSmokeTest"/>
         </methods>
-      </class> <!-- testscript.RestructureLeaseTest -->
+      </class> <!-- scenarios.LeaseRebookTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

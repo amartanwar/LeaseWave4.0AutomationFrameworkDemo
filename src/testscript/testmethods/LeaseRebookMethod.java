@@ -1,36 +1,38 @@
-package testscript;
+package testscript.testmethods;
 
 import java.io.IOException;
 
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
-import generic.BaseTest;
+import generic.excel;
 import pom.LeaseEntryHomePage;
 import pom.LeaseListPage;
 import pom.LeaseMenuPage;
 import pom.LeaseRebookParametersPage;
 
-public class LeaseRebookTest extends BaseTest
+public class LeaseRebookMethod
 {
-	@Test
-	public void leaseRebookSmokeTest() throws InterruptedException, IOException
+	public void leaseRebook(WebDriver driver,int row) throws InterruptedException, IOException
 	{
+		String leaseSequenceNumber = excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,0);
 		
-		//Open Lease Rebook
-		LeaseMenuPage lm= new LeaseMenuPage(driver);
-		lm.openLeaseRebookPage();
+        //Open Lease Rebook
+		LeaseMenuPage lm1= new LeaseMenuPage(driver);
+		lm1.openLeaseRebookPage();
 		
 		//select a lease
-		LeaseListPage ll= new LeaseListPage(driver);
+		Thread.sleep(2000);
+		LeaseListPage ll1= new LeaseListPage(driver);
 		
 		//enter unitNumber
-		ll.searchByUnitNumber("Auto-602");
+		ll1.searchByUnitNumber2(leaseSequenceNumber);
 		
 		//Click on search
-		ll.clickOnSearchButton();
+		ll1.clickOnSearchButton();
 		
 		//select the lease
-		ll.clickONSelectButton();
+		ll1.clickONSelectButton();
 		
 		//enter rebook date
 		LeaseRebookParametersPage lp=new LeaseRebookParametersPage(driver);
@@ -43,6 +45,8 @@ public class LeaseRebookTest extends BaseTest
 		LeaseEntryHomePage le=new LeaseEntryHomePage(driver);
 		le.selectLeaseBookingStatus();
 		
+		Reporter.log("LeaseRebook method ran successfully", true);
+		
 		//click on save Button
 		le.clickOnSaveButton();
 		
@@ -51,7 +55,6 @@ public class LeaseRebookTest extends BaseTest
 		
 		//Validate lease rebook
 		le.verfyTittle("Lease List", "Lease rebook failed");
-		
-		
+		       
 	}
 }
