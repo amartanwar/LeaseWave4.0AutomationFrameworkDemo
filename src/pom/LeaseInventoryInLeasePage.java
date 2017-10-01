@@ -42,28 +42,7 @@ public class LeaseInventoryInLeasePage extends BasePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickOnAddButon() throws InterruptedException
-	{
-		WebDriverWait wt= new WebDriverWait(driver, 300);
-		wt.until(ExpectedConditions.visibilityOf(addButton));
-		addButton.click();
-		
-		SwitchControlToNextWindow sc= new SwitchControlToNextWindow();
-//		sc.switchControlToNextWindow1(driver, "Asset List");
-		sc.waitForNumberOfWindowsToEqual(driver, 2);
-		Thread.sleep(5000);
-		for(String winHandle: driver.getWindowHandles())
-		{
-		
-			driver.switchTo().window(winHandle);
-		}
-		
-		
-	}
-	
-	
-	
-	public void clickOnAddButton2()
+	public void clickOnAddButton()
 	{
 		WebDriverWait wt= new WebDriverWait(driver, 300);
 		wt.until(ExpectedConditions.visibilityOf(addButton));

@@ -10,7 +10,7 @@ import pom.AssetListPage;
 import pom.AssetMenuPage;
 import pom.AssetProfilePage;
 
-public  class AssetCreationMethod 
+public  class AssetCreationMethod
 {
 	
 	public void createAsset(WebDriver driver,int row) throws IOException, InterruptedException

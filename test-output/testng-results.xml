@@ -47,7 +47,13 @@
       <![CDATA[InvoiceGeneration method ran successfully]]>
     </line>
     <line>
-      <![CDATA[ReceiptPostingbyInvoice method ran successfully]]>
+      <![CDATA[ReceiptPostingByReceivable method ran successfully]]>
+    </line>
+    <line>
+      <![CDATA[AssetCreation method ran successfully]]>
+    </line>
+    <line>
+      <![CDATA[LeaseYieldVerification method ran successfully]]>
     </line>
     <line>
       <![CDATA[AssetCreation method ran successfully]]>
@@ -73,23 +79,17 @@
     <line>
       <![CDATA[LeaseRestructure method ran successfully]]>
     </line>
-    <line>
-      <![CDATA[AssetCreation method ran successfully]]>
-    </line>
-    <line>
-      <![CDATA[LeaseYieldVerification method ran successfully]]>
-    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="963358" started-at="2017-10-01T08:58:27Z" finished-at="2017-10-01T09:14:31Z">
+  <suite name="Suite" duration-ms="1029635" started-at="2017-10-01T19:17:21Z" finished-at="2017-10-01T19:34:30Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="963358" started-at="2017-10-01T08:58:27Z" finished-at="2017-10-01T09:14:31Z">
-      <class name="scenarios.AdvanceLease_ReceiptPosting_ByInvoiceEndToEndTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad]" name="openApplication" is-config="true" duration-ms="9353" started-at="2017-10-01T14:28:27Z" finished-at="2017-10-01T14:28:37Z">
+    <test name="Test" duration-ms="1029635" started-at="2017-10-01T19:17:21Z" finished-at="2017-10-01T19:34:30Z">
+      <class name="scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest@12cc05a]" name="openApplication" is-config="true" duration-ms="8175" started-at="2017-10-02T00:51:33Z" finished-at="2017-10-02T00:51:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="testingAdvanceLeaseEndToEnd()[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad]" name="testingAdvanceLeaseEndToEnd" duration-ms="228881" started-at="2017-10-01T14:28:37Z" finished-at="2017-10-01T14:32:25Z">
+        <test-method status="PASS" signature="testingAdvanceLeaseEndToEnd()[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest@12cc05a]" name="testingAdvanceLeaseEndToEnd" duration-ms="262134" started-at="2017-10-02T00:51:41Z" finished-at="2017-10-02T00:56:03Z">
           <reporter-output>
             <line>
               <![CDATA[AssetCreation method ran successfully]]>
@@ -113,28 +113,28 @@
               <![CDATA[InvoiceGeneration method ran successfully]]>
             </line>
             <line>
-              <![CDATA[ReceiptPostingbyInvoice method ran successfully]]>
+              <![CDATA[ReceiptPostingByReceivable method ran successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- testingAdvanceLeaseEndToEnd -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad]" name="closeApplication" is-config="true" duration-ms="1017" started-at="2017-10-01T14:32:25Z" finished-at="2017-10-01T14:32:26Z">
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest@12cc05a]" name="closeApplication" is-config="true" duration-ms="895" started-at="2017-10-02T00:56:03Z" finished-at="2017-10-02T00:56:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testingAdvanceLeaseEndToEnd status=SUCCESS method=AdvanceLease_ReceiptPosting_ByInvoiceEndToEndTest.testingAdvanceLeaseEndToEnd()[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad] output=AssetCreation method ran successfully]]]>
+                <![CDATA[[TestResult name=testingAdvanceLeaseEndToEnd status=SUCCESS method=AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest.testingAdvanceLeaseEndToEnd()[pri:0, instance:scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest@12cc05a] output=AssetCreation method ran successfully]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- scenarios.AdvanceLease_ReceiptPosting_ByInvoiceEndToEndTest -->
+      </class> <!-- scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest -->
       <class name="scenarios.LeaseRebookTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.LeaseRebookTest@1933fd1]" name="openApplication" is-config="true" duration-ms="8594" started-at="2017-10-01T14:36:23Z" finished-at="2017-10-01T14:36:32Z">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.LeaseRebookTest@8a9f61]" name="openApplication" is-config="true" duration-ms="9328" started-at="2017-10-02T00:58:11Z" finished-at="2017-10-02T00:58:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="LeaseRebookSmokeTest()[pri:0, instance:scenarios.LeaseRebookTest@1933fd1]" name="LeaseRebookSmokeTest" duration-ms="150355" started-at="2017-10-01T14:36:32Z" finished-at="2017-10-01T14:39:02Z">
+        <test-method status="PASS" signature="LeaseRebookSmokeTest()[pri:0, instance:scenarios.LeaseRebookTest@8a9f61]" name="LeaseRebookSmokeTest" duration-ms="152138" started-at="2017-10-02T00:58:21Z" finished-at="2017-10-02T01:00:53Z">
           <reporter-output>
             <line>
               <![CDATA[AssetCreation method ran successfully]]>
@@ -147,11 +147,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- LeaseRebookSmokeTest -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.LeaseRebookTest@1933fd1]" name="closeApplication" is-config="true" duration-ms="906" started-at="2017-10-01T14:39:02Z" finished-at="2017-10-01T14:39:03Z">
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.LeaseRebookTest@8a9f61]" name="closeApplication" is-config="true" duration-ms="930" started-at="2017-10-02T01:00:53Z" finished-at="2017-10-02T01:00:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LeaseRebookSmokeTest status=SUCCESS method=LeaseRebookTest.LeaseRebookSmokeTest()[pri:0, instance:scenarios.LeaseRebookTest@1933fd1] output=AssetCreation method ran successfully]]]>
+                <![CDATA[[TestResult name=LeaseRebookSmokeTest status=SUCCESS method=LeaseRebookTest.LeaseRebookSmokeTest()[pri:0, instance:scenarios.LeaseRebookTest@8a9f61] output=AssetCreation method ran successfully]]]>
               </value>
             </param>
           </params>
@@ -159,39 +159,12 @@
           </reporter-output>
         </test-method> <!-- closeApplication -->
       </class> <!-- scenarios.LeaseRebookTest -->
-      <class name="scenarios.LeaseYieldVerificationTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.LeaseYieldVerificationTest@153acfe]" name="openApplication" is-config="true" duration-ms="8638" started-at="2017-10-01T14:42:28Z" finished-at="2017-10-01T14:42:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="testingLeaseYield()[pri:0, instance:scenarios.LeaseYieldVerificationTest@153acfe]" name="testingLeaseYield" duration-ms="113264" started-at="2017-10-01T14:42:36Z" finished-at="2017-10-01T14:44:30Z">
-          <reporter-output>
-            <line>
-              <![CDATA[AssetCreation method ran successfully]]>
-            </line>
-            <line>
-              <![CDATA[LeaseYieldVerification method ran successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testingLeaseYield -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.LeaseYieldVerificationTest@153acfe]" name="closeApplication" is-config="true" duration-ms="907" started-at="2017-10-01T14:44:30Z" finished-at="2017-10-01T14:44:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testingLeaseYield status=SUCCESS method=LeaseYieldVerificationTest.testingLeaseYield()[pri:0, instance:scenarios.LeaseYieldVerificationTest@153acfe] output=AssetCreation method ran successfully]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- scenarios.LeaseYieldVerificationTest -->
       <class name="scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@12cc05a]" name="openApplication" is-config="true" duration-ms="8667" started-at="2017-10-01T14:32:26Z" finished-at="2017-10-01T14:32:35Z">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad]" name="openApplication" is-config="true" duration-ms="10190" started-at="2017-10-02T00:47:21Z" finished-at="2017-10-02T00:47:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="testingArrearsLeaseEndToEnd()[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@12cc05a]" name="testingArrearsLeaseEndToEnd" duration-ms="227394" started-at="2017-10-01T14:32:35Z" finished-at="2017-10-01T14:36:23Z">
+        <test-method status="PASS" signature="testingArrearsLeaseEndToEnd()[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad]" name="testingArrearsLeaseEndToEnd" duration-ms="240760" started-at="2017-10-02T00:47:31Z" finished-at="2017-10-02T00:51:32Z">
           <reporter-output>
             <line>
               <![CDATA[AssetCreation method ran successfully]]>
@@ -219,11 +192,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- testingArrearsLeaseEndToEnd -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@12cc05a]" name="closeApplication" is-config="true" duration-ms="908" started-at="2017-10-01T14:36:23Z" finished-at="2017-10-01T14:36:23Z">
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad]" name="closeApplication" is-config="true" duration-ms="1054" started-at="2017-10-02T00:51:32Z" finished-at="2017-10-02T00:51:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testingArrearsLeaseEndToEnd status=SUCCESS method=ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest.testingArrearsLeaseEndToEnd()[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@12cc05a] output=AssetCreation method ran successfully]]]>
+                <![CDATA[[TestResult name=testingArrearsLeaseEndToEnd status=SUCCESS method=ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest.testingArrearsLeaseEndToEnd()[pri:0, instance:scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad] output=AssetCreation method ran successfully]]]>
               </value>
             </param>
           </params>
@@ -231,12 +204,39 @@
           </reporter-output>
         </test-method> <!-- closeApplication -->
       </class> <!-- scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest -->
-      <class name="scenarios.LeaseRestructureTest">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.LeaseRestructureTest@8a9f61]" name="openApplication" is-config="true" duration-ms="8627" started-at="2017-10-01T14:39:03Z" finished-at="2017-10-01T14:39:12Z">
+      <class name="scenarios.LeaseYieldVerificationTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.LeaseYieldVerificationTest@1933fd1]" name="openApplication" is-config="true" duration-ms="8770" started-at="2017-10-02T00:56:04Z" finished-at="2017-10-02T00:56:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="LeaseRestructureSmokeTest()[pri:0, instance:scenarios.LeaseRestructureTest@8a9f61]" name="LeaseRestructureSmokeTest" duration-ms="194908" started-at="2017-10-01T14:39:12Z" finished-at="2017-10-01T14:42:27Z">
+        <test-method status="PASS" signature="testingLeaseYield()[pri:0, instance:scenarios.LeaseYieldVerificationTest@1933fd1]" name="testingLeaseYield" duration-ms="117590" started-at="2017-10-02T00:56:13Z" finished-at="2017-10-02T00:58:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[AssetCreation method ran successfully]]>
+            </line>
+            <line>
+              <![CDATA[LeaseYieldVerification method ran successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testingLeaseYield -->
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.LeaseYieldVerificationTest@1933fd1]" name="closeApplication" is-config="true" duration-ms="1223" started-at="2017-10-02T00:58:10Z" finished-at="2017-10-02T00:58:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testingLeaseYield status=SUCCESS method=LeaseYieldVerificationTest.testingLeaseYield()[pri:0, instance:scenarios.LeaseYieldVerificationTest@1933fd1] output=AssetCreation method ran successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- scenarios.LeaseYieldVerificationTest -->
+      <class name="scenarios.LeaseRestructureTest">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:scenarios.LeaseRestructureTest@153acfe]" name="openApplication" is-config="true" duration-ms="10230" started-at="2017-10-02T01:00:54Z" finished-at="2017-10-02T01:01:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="PASS" signature="LeaseRestructureSmokeTest()[pri:0, instance:scenarios.LeaseRestructureTest@153acfe]" name="LeaseRestructureSmokeTest" duration-ms="205260" started-at="2017-10-02T01:01:04Z" finished-at="2017-10-02T01:04:29Z">
           <reporter-output>
             <line>
               <![CDATA[AssetCreation method ran successfully]]>
@@ -255,11 +255,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- LeaseRestructureSmokeTest -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.LeaseRestructureTest@8a9f61]" name="closeApplication" is-config="true" duration-ms="923" started-at="2017-10-01T14:42:27Z" finished-at="2017-10-01T14:42:28Z">
+        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:scenarios.LeaseRestructureTest@153acfe]" name="closeApplication" is-config="true" duration-ms="928" started-at="2017-10-02T01:04:29Z" finished-at="2017-10-02T01:04:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LeaseRestructureSmokeTest status=SUCCESS method=LeaseRestructureTest.LeaseRestructureSmokeTest()[pri:0, instance:scenarios.LeaseRestructureTest@8a9f61] output=AssetCreation method ran successfully]]]>
+                <![CDATA[[TestResult name=LeaseRestructureSmokeTest status=SUCCESS method=LeaseRestructureTest.LeaseRestructureSmokeTest()[pri:0, instance:scenarios.LeaseRestructureTest@153acfe] output=AssetCreation method ran successfully]]]>
               </value>
             </param>
           </params>

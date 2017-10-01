@@ -9,5 +9,6 @@ public interface AutoConst
 	String IE_KEY="webdriver.ie.driver";
 	String IE_VALUE="./drivers/IEDriverServer.exe";
 	String SNAP_PATH="./ScreenShots/" ;
+	String InputXlPath="./TestData/Input.xlsx";
 	
 }
