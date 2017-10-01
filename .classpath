@@ -9,7 +9,7 @@
 	<classpathentry kind="lib" path="Jars/curvesapi-1.04.jar"/>
 	<classpathentry kind="lib" path="Jars/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="Jars/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="Jars/poi-excelant-3.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="Jars/poi-excelant-3.16.jar"/>
 	<classpathentry kind="lib" path="Jars/poi-ooxml-3.16.jar"/>
 	<classpathentry kind="lib" path="Jars/poi-ooxml-schemas-3.16.jar"/>
 	<classpathentry kind="lib" path="Jars/poi-scratchpad-3.16.jar"/>
