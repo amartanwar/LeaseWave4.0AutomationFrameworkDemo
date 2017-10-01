@@ -55,7 +55,7 @@ public class LeaseCreationMethod
 				//LeaseInventoryInlease screen
 				LeaseInventoryInLeasePage ilp=new LeaseInventoryInLeasePage(driver);
 				String beforeWindow = driver.getWindowHandle();
-				ilp.clickOnAddButton2();
+				ilp.clickOnAddButton();
 				//AssetList page
 				AssetListPage asl=new AssetListPage(driver);
 				asl.searchByUnitNumber(un);
@@ -65,7 +65,7 @@ public class LeaseCreationMethod
 				asl.clickOnSelectExportButton();
 				driver.switchTo().window(beforeWindow);
 				//LeaseInventoryInlease screen
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				ilp.selectAsset();
 				ilp.selectPrimaryAsset();
 				ilp.clickOnEditButton();
@@ -132,8 +132,7 @@ public class LeaseCreationMethod
 				le.selectLeaseBookingStatus();
 				le.clickOnSaveButton();
 				le.handlePopup1();
-//				le.handlePopup2();
-				
+
 				//validating Result
 				le.verfyTittle("Lease List", "Lease creation test pass");
 				

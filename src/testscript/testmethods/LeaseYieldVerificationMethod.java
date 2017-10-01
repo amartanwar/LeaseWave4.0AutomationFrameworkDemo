@@ -55,7 +55,7 @@ public class LeaseYieldVerificationMethod
 						//LeaseInventoryInlease screen
 						LeaseInventoryInLeasePage ilp=new LeaseInventoryInLeasePage(driver);
 						String beforeWindow = driver.getWindowHandle();
-						ilp.clickOnAddButton2();
+						ilp.clickOnAddButton();
 						//AssetList page
 						AssetListPage asl=new AssetListPage(driver);
 						asl.searchByUnitNumber(un);
