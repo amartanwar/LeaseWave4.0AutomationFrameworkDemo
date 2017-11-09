@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.Lease;
 
 import java.io.IOException;
 

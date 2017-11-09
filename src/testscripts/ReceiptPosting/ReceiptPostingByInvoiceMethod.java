@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.ReceiptPosting;
 
 import java.io.IOException;
 

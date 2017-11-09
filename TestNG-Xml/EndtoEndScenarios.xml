@@ -2,11 +2,11 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest"/>
+       <class name="scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest"/>
        <class name="scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest"/>
-      <class name="scenarios.LeaseYieldVerificationTest"/>
+       <class name="scenarios.LeaseYieldVerificationTest"/>
        <class name="scenarios.LeaseRebookTest"/>
-      <class name="scenarios.LeaseRestructureTest"/>
+       <class name="scenarios.LeaseRestructureTest"/>
     </classes>
   </test> 
 </suite> 

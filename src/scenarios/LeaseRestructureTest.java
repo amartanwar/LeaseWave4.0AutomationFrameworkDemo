@@ -6,16 +6,16 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
-import testscript.testmethods.AssetCreationMethod;
-import testscript.testmethods.AssetStatusAndValueChangeMethod;
-import testscript.testmethods.LeaseCreationMethod;
-import testscript.testmethods.LeaseIncomeUpdateMethod;
-import testscript.testmethods.LeaseLTtoSTUpdateMethod;
-import testscript.testmethods.LeaseRestructureMethod;
+import testscripts.Asset.AssetCreationMethod;
+import testscripts.AssetCostAndValueAssignment.AssetStatusAndValueChangeMethod;
+import testscripts.LTtoSTUpdate.LeaseLTtoSTUpdateMethod;
+import testscripts.Lease.LeaseCreationMethod;
+import testscripts.Lease.LeaseRestructureMethod;
+import testscripts.LeaseIncomeUpdate.LeaseIncomeUpdateMethod;
 
 public class LeaseRestructureTest extends BaseTest
 {
-	@Test()
+	@Test(groups="Smoke Test")
 	public void LeaseRestructureSmokeTest() throws IOException, InterruptedException, AWTException
 	{
 		AssetCreationMethod as = new AssetCreationMethod();

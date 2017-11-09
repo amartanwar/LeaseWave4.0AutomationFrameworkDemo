@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.InvoiceDateUpdate;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;

@@ -4,14 +4,14 @@ import java.awt.AWTException;
 import java.io.IOException;
 import org.testng.annotations.Test;
 import generic.BaseTest;
-import testscript.testmethods.AssetCreationMethod;
-import testscript.testmethods.AssetStatusAndValueChangeMethod;
-import testscript.testmethods.LeaseCreationMethod;
-import testscript.testmethods.LeaseRebookMethod;
+import testscripts.Asset.AssetCreationMethod;
+import testscripts.AssetCostAndValueAssignment.AssetStatusAndValueChangeMethod;
+import testscripts.Lease.LeaseCreationMethod;
+import testscripts.Lease.LeaseRebookMethod;
 
 public class LeaseRebookTest extends BaseTest
 {
-		@Test()
+		@Test(groups="Smoke Test")
 		public void LeaseRebookSmokeTest() throws IOException, InterruptedException, AWTException
 		{
 			AssetCreationMethod as = new AssetCreationMethod();

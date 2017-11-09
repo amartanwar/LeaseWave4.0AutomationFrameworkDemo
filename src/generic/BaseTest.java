@@ -46,8 +46,8 @@ public abstract class BaseTest implements AutoConst
 		
 		WebDriverWait wait= new WebDriverWait(driver, 56);
 		wait.until(ExpectedConditions.visibilityOf(lp.userName));
-//		lp.setuserName("aishwarya.v");
-//		lp.setPassword("Samsung-1234");
+		lp.setuserName("aishwarya.v");
+		lp.setPassword("Samsung-1234");
 		lp.clickOnLogin();
 	}
 	

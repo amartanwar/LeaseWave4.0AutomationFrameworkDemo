@@ -1,5 +1,6 @@
-package testscript.testmethods;
+package testscripts.Lease;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,7 @@ import pom.RestructureDatePage;
 
 public class LeaseRestructureMethod 
 {
-	public void LeaseRestructure(WebDriver driver,int row) throws InterruptedException, IOException
+	public void LeaseRestructure(WebDriver driver,int row) throws InterruptedException, IOException, AWTException
 	{
 		String un=excel.getCellValue("./TestData/Input.xlsx", "AssetProfile", row,0);
 		//open lease structure screen

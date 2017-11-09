@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.Lease;
 
 import java.awt.AWTException;
 import java.io.IOException;

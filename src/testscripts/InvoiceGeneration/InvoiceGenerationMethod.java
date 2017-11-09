@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.InvoiceGeneration;
 
 import java.awt.AWTException;
 
