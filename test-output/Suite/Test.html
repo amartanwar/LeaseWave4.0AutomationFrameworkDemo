@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Oct 02 00:47:21 IST 2017</td>
+<td>Started on:</td><td>Sun Oct 15 16:56:08 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>1029 seconds (1029635 ms)</td>
+<tr><td>Total time:</td><td>87 seconds (87796 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,94 +67,64 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='scenarios.LeaseRebookTest.LeaseRebookSmokeTest()'><b>LeaseRebookSmokeTest</b><br>Test class: scenarios.LeaseRebookTest<br/>
-<a href="#Output-3249350" onClick='toggleBox("Output-3249350", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-3249350" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-3249350">
-AssetCreation method ran successfully<br/>
-LeaseCreattion method ran successfully<br/>
-LeaseRebook method ran successfully<br/>
-</div>
-</td>
-<td></td>
-<td>152</td>
-<td>scenarios.LeaseRebookTest@8a9f61</td></tr>
-<tr>
-<td title='scenarios.LeaseRestructureTest.LeaseRestructureSmokeTest()'><b>LeaseRestructureSmokeTest</b><br>Test class: scenarios.LeaseRestructureTest<br/>
-<a href="#Output-20031240" onClick='toggleBox("Output-20031240", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-20031240" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-20031240">
-AssetCreation method ran successfully<br/>
-LeaseCreattion method ran successfully<br/>
-LeaseLTtoSTUpdate method ran successfully<br/>
-LeaseIncomeUpdate method ran successfully<br/>
-LeaseRestructure method ran successfully<br/>
-</div>
-</td>
-<td></td>
-<td>205</td>
-<td>scenarios.LeaseRestructureTest@153acfe</td></tr>
-<tr>
-<td title='scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest.testingAdvanceLeaseEndToEnd()'><b>testingAdvanceLeaseEndToEnd</b><br>Test class: scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest<br/>
-<a href="#Output-21039395" onClick='toggleBox("Output-21039395", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-21039395" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-21039395">
-AssetCreation method ran successfully<br/>
-LeaseCreattion method ran successfully<br/>
-LeaseLTtoSTUpdate method ran successfully<br/>
-LeaseIncomeUpdate method ran successfully<br/>
-InvoiceDateUpdate method ran successfully<br/>
-SalesTaxUpdate method ran successfully<br/>
-InvoiceGeneration method ran successfully<br/>
-ReceiptPostingByReceivable method ran successfully<br/>
-</div>
-</td>
-<td></td>
-<td>262</td>
-<td>scenarios.AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest@12cc05a</td></tr>
-<tr>
-<td title='scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest.testingArrearsLeaseEndToEnd()'><b>testingArrearsLeaseEndToEnd</b><br>Test class: scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest<br/>
-<a href="#Output-4926863" onClick='toggleBox("Output-4926863", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-4926863" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-4926863">
-AssetCreation method ran successfully<br/>
-LeaseCreattion method ran successfully<br/>
-LeaseLTtoSTUpdate method ran successfully<br/>
-LeaseIncomeUpdate method ran successfully<br/>
-InvoiceDateUpdate method ran successfully<br/>
-SalesTaxUpdate method ran successfully<br/>
-InvoiceGeneration method ran successfully<br/>
-ReceiptPostingbyInvoice method ran successfully<br/>
-</div>
-</td>
-<td></td>
-<td>240</td>
-<td>scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest@1c7cbad</td></tr>
-<tr>
 <td title='scenarios.LeaseYieldVerificationTest.testingLeaseYield()'><b>testingLeaseYield</b><br>Test class: scenarios.LeaseYieldVerificationTest<br/>
-<a href="#Output-5891166" onClick='toggleBox("Output-5891166", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-17265423" onClick='toggleBox("Output-17265423", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-5891166" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-5891166">
+<a href="#Output-17265423" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-17265423">
 AssetCreation method ran successfully<br/>
-LeaseYieldVerification method ran successfully<br/>
 </div>
 </td>
-<td></td>
-<td>117</td>
-<td>scenarios.LeaseYieldVerificationTest@1933fd1</td></tr>
+<td><div><pre>java.lang.AssertionError: customerYeild is not matching expected [28.559905] but found [6.294502]
+	at pom.LeaseAccrualPage.verifyYeild(LeaseAccrualPage.java:53)
+	at testscript.testmethods.LeaseYieldVerificationMethod.LeaseYieldVerification(LeaseYieldVerificationMethod.java:128)
+	at scenarios.LeaseYieldVerificationTest.testingLeaseYield(LeaseYieldVerificationTest.java:25)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace17265423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace17265423'><pre>java.lang.AssertionError: customerYeild is not matching expected [28.559905] but found [6.294502]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at pom.LeaseAccrualPage.verifyYeild(LeaseAccrualPage.java:53)
+	at testscript.testmethods.LeaseYieldVerificationMethod.LeaseYieldVerification(LeaseYieldVerificationMethod.java:128)
+	at scenarios.LeaseYieldVerificationTest.testingLeaseYield(LeaseYieldVerificationTest.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+</pre></div></td>
+<td>78</td>
+<td>scenarios.LeaseYieldVerificationTest@15b5592</td></tr>
 </table><p>
 </body>
 </html>

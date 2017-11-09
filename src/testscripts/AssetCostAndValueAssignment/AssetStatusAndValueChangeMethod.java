@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.AssetCostAndValueAssignment;
 
 import java.io.IOException;
 

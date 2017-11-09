@@ -3,20 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="scenarios.LeaseRestructureTest">
+      <class name="scenarios.LeaseYieldVerificationTest">
         <methods>
-          <include name="closeApplication"/>
-          <include name="LeaseRestructureSmokeTest"/>
-          <include name="openApplication"/>
-        </methods>
-      </class> <!-- scenarios.LeaseRestructureTest -->
-      <class name="scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest">
-        <methods>
-          <include name="testingArrearsLeaseEndToEnd"/>
+          <include name="testingLeaseYield"/>
           <include name="closeApplication"/>
           <include name="openApplication"/>
         </methods>
-      </class> <!-- scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest -->
+      </class> <!-- scenarios.LeaseYieldVerificationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

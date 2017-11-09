@@ -2,7 +2,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="scenarios.LeaseBulkCreationTest"/>
+       <class name="scenarios.ArrearsLease__ReceiptPosting_ByInvoiceEndToEndTest"/>
     </classes>
-  </test>
-</suite>
+  </test> 
+</suite> 

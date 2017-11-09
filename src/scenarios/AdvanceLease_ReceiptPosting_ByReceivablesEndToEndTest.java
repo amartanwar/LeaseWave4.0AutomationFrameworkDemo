@@ -6,19 +6,19 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
-import testscript.testmethods.AssetCreationMethod;
-import testscript.testmethods.AssetStatusAndValueChangeMethod;
-import testscript.testmethods.InvoiceDateUpdateMethod;
-import testscript.testmethods.InvoiceGenerationMethod;
-import testscript.testmethods.LeaseCreationMethod;
-import testscript.testmethods.LeaseIncomeUpdateMethod;
-import testscript.testmethods.LeaseLTtoSTUpdateMethod;
-import testscript.testmethods.ReceiptPostingByReceivablesMethod;
-import testscript.testmethods.SalesTaxUpdateMethod;
+import testscripts.Asset.AssetCreationMethod;
+import testscripts.AssetCostAndValueAssignment.AssetStatusAndValueChangeMethod;
+import testscripts.InvoiceDateUpdate.InvoiceDateUpdateMethod;
+import testscripts.InvoiceGeneration.InvoiceGenerationMethod;
+import testscripts.LTtoSTUpdate.LeaseLTtoSTUpdateMethod;
+import testscripts.Lease.LeaseCreationMethod;
+import testscripts.LeaseIncomeUpdate.LeaseIncomeUpdateMethod;
+import testscripts.ReceiptPosting.ReceiptPostingByReceivablesMethod;
+import testscripts.SalesTaxUpdate.SalesTaxUpdateMethod;
 
 public class AdvanceLease_ReceiptPosting_ByReceivablesEndToEndTest extends BaseTest
 {
-	@Test()
+	@Test(groups="E2E Test")
 	public void testingAdvanceLeaseEndToEnd() throws IOException, InterruptedException, AWTException
 	{
 		AssetCreationMethod as = new AssetCreationMethod();

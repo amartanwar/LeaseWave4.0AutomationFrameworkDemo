@@ -4,10 +4,10 @@ import java.awt.AWTException;
 import java.io.IOException;
 import org.testng.annotations.Test;
 import generic.BaseTest;
-import testscript.testmethods.AssetCreationMethod;
-import testscript.testmethods.AssetStatusAndValueChangeMethod;
-import testscript.testmethods.LeaseCreationMethod;
-import testscript.testmethods.LeaseLTtoSTUpdateMethod;
+import testscripts.Asset.AssetCreationMethod;
+import testscripts.AssetCostAndValueAssignment.AssetStatusAndValueChangeMethod;
+import testscripts.LTtoSTUpdate.LeaseLTtoSTUpdateMethod;
+import testscripts.Lease.LeaseCreationMethod;
 
 public class LeaseLTtoSTUpdateTest extends BaseTest
 {	
