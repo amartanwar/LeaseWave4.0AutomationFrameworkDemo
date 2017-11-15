@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.SalesTaxUpdate;
 
 import java.awt.AWTException;
 

@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.LeaseIncomeUpdate;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;

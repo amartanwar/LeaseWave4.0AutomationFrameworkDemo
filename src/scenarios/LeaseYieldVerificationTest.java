@@ -6,9 +6,9 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
-import testscript.testmethods.AssetCreationMethod;
-import testscript.testmethods.AssetStatusAndValueChangeMethod;
-import testscript.testmethods.LeaseYieldVerificationMethod;
+import testscripts.Asset.AssetCreationMethod;
+import testscripts.AssetCostAndValueAssignment.AssetStatusAndValueChangeMethod;
+import testscripts.Lease.LeaseYieldVerificationMethod;
 
 public class LeaseYieldVerificationTest extends BaseTest
 {

@@ -69,7 +69,7 @@ public class SalesTaxUpdatePage extends BasePage
 	
 	public void clickOnrunImmediatelyr() throws AWTException
 	{
-		ScrollOptions.scrollingEndofAPage2(40);
+		ScrollOptions.scrollingEndofAPage2();
 		runImmediately.click();
 	}
 	

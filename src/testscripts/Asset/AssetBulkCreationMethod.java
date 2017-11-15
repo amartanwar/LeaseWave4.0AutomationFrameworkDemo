@@ -1,4 +1,4 @@
-package testscript.testmethods;
+package testscripts.Asset;
 
 import java.io.IOException;
 

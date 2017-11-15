@@ -5,9 +5,9 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 import generic.BaseTest;
-import testscript.testmethods.AssetBulkCostAssignmentMethod;
-import testscript.testmethods.AssetBulkCreationMethod;
-import testscript.testmethods.LeaseBulkCreationMethod;
+import testscripts.Asset.AssetBulkCreationMethod;
+import testscripts.AssetCostAndValueAssignment.AssetBulkCostAssignmentMethod;
+import testscripts.Lease.LeaseBulkCreationMethod;
 
 
 public class LeaseBulkCreationTest extends BaseTest
